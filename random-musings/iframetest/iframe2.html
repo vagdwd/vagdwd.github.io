@@ -1,0 +1,36 @@
+<html>
+<head>
+<script>
+window.starttime = new Date().getTime();
+(function(d){
+  var iframe = d.createElement('iframe');
+  var s = d.getElementsByTagName('script')[0]; 
+  iframe.style.cssText = "position:absolute;width:200px;height:100px;left:0px;";
+  iframe.src = "./childframe.html";
+  s.parentNode.insertBefore(iframe, s);
+  //doc = iframe.contentWindow.document;
+
+  
+  logTime('iframe beforeonload');
+  //doc.close(); //iframe onload event happens
+  //logTime('iframe onload');
+
+  })(document);
+function logTime(id) {
+    var st = (new Date().getTime()) - window.starttime;
+    console.log(id + " " + st);
+}
+
+function parentOnload() {
+logTime('parent onload')
+}
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
+</head>
+<body onload="parentOnload()">
+<a href="/opener/opener1.html">Navigate Away</a>
+<button onclick="openChild()">Open Child window</button>
+<div id="messagearea"></div>
+<script src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
+</body
+</html>

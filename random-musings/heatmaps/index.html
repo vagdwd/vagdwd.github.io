@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Title goes here</title>
+  <meta name="description" content="Description of your site goes here">
+  <meta name="keywords" content="keyword1, keyword2, keyword3">
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script type='text/javascript' src='./heatmap.js'></script>
+  <script type='text/javascript' src='./heatmap.impl.js'></script>
+  <script type="text/javascript" src="./html2canvas.js"></script>
+  <script>
+  window.onload = function () {
+      html2canvas(document.body, {
+        onrendered: function(canvas) {
+            var dataUrl = canvas.toDataURL("image/png");
+            console.log(dataUrl);
+        },
+        logging: true
+    });
+    };
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="page">
+<div class="header">
+<div class="header-img"><img src="images/header.jpg" alt="" height="185"
+ width="1000"></div>
+<div class="topmenu">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="#">About Us</a></li>
+  <li><a href="#">Photos</a></li>
+  <li><a href="#">Resources</a></li>
+  <li><a href="#">Email Us</a></li>
+</ul>
+</div>
+</div>
+<div class="content">
+<div class="left">
+<h1 class="title">Welcome to our site</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+consectetur augue eu neque. Mauris augue. Quisque dui. Mauris cursus
+ultricies est. Quisque lorem. Pellentesque feugiat, ante non
+ullamcorper porta, est augue tempus libero, ut aliquet nunc lorem eget
+odio. Etiam et lacus quis enim lobortis gravida. Praesent pellentesque.
+Donec bibendum leo eu metus. Praesent tincidunt pretium augue. Duis
+commodo, nisi id sollicitudin tincidunt, ligula dui varius erat, non
+ullamcorper elit nisl in dui. Vestibulum ut nibh. Ut elit ipsum,
+blandit eu, ornare in, volutpat et, eros. In nunc. Phasellus nec mi in
+justo pulvinar fermentum.</p>
+<p>&nbsp;</p>
+<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+posuere cubilia Curae; Nullam pellentesque purus quis dui. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis
+egestas. Aenean commodo orci id tortor. Morbi fringilla, ligula sed
+tincidunt euismod, tellus nulla posuere urna, feugiat feugiat ipsum
+orci sit amet nisi. In suscipit tortor in nisi. Maecenas dui. Proin
+porta nulla rhoncus odio. Proin ut elit. Morbi ac metus. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis
+egestas. Fusce feugiat suscipit lorem. Aenean tellus nibh, dictum at,
+auctor id, porta id, mi. Ut sit amet purus nec leo ullamcorper
+sollicitudin. Duis massa.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 class="title">Lorem ipsum dolor sit amet</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+consectetur augue eu neque. Mauris augue. Quisque dui. Mauris cursus
+ultricies est. Quisque lorem. Pellentesque feugiat, ante non
+ullamcorper porta, est augue tempus libero, ut aliquet nunc lorem eget
+odio. Etiam et lacus quis enim lobortis gravida. Praesent pellentesque.
+Donec bibendum leo eu metus. Praesent tincidunt pretium augue. Duis
+commodo, nisi id sollicitudin tincidunt, ligula dui varius erat, non
+ullamcorper elit nisl in dui. Vestibulum ut nibh. Ut elit ipsum,
+blandit eu, ornare in, volutpat et, eros. In nunc. Phasellus nec mi in
+justo pulvinar fermentum.</p>
+</div>
+<div class="right">
+<h2>Main Menu</h2>
+<ul>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+</ul>
+<h2>Link Partners</h2>
+<ul>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+  <li><a href="#">Link goes here</a></li>
+</ul>
+</div>
+</div>
+<!--DO NOT Remove The Footer Links-->
+<a href="http://www.htmltemplates.net">
+<img src="images/footer.gif" alt="html templates" border="0" height="1" width="1"></a>
+<div class="footer">&copy; 2010 Your Website Name. Designed by <a
+ class="footer-link" target="_blank"
+ href="http://www.htmltemplates.net/">htmltemplates.net</a><br>
+<!--DO NOT Remove The Footer Links-->
+</div>
+</div>
+</div>
+</body>
+</html>

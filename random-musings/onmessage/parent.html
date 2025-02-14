@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+<body>
+<iframe src="https://s3.amazonaws.com/vagdwd/random-musings/onmessage/child.html" id="otherframe"></iframe>
+<div id="form">
+  <input type="text" id="msg" value="Message to send"/>
+  <select id="messageto">
+      <option value="iframe">Iframe</option>
+      <option value="newwin">New Window</option>
+  </select>
+  <input type="button" id="newwindow" value="Open New window"/>
+  <input type="button" id="mysubmit" value="Click Me"/>
+</form>
+<script>
+window.onload = function(){
+    var newWindowOpened = false;
+    var newwin = null;
+    var win = document.getElementById("otherframe").contentWindow;
+    document.getElementById("mysubmit").onclick = function(e){
+            var msgto = document.getElementById('messageto').value;
+            if (msgto == "iframe") {
+                win.postMessage(document.getElementById("msg").value, "https://s3.amazonaws.com");
+            } else {
+                newwin.window.postMessage(document.getElementById("msg").value, "https://s3.amazonaws.com")
+            }
+    };
+    document.getElementById("newwindow").onclick = function(e){
+        if (newWindowOpened == false) {
+            newwin = window.open("https://s3.amazonaws.com/vagdwd/random-musings/onmessage/child.html", "ChatWindow", "height=300, width=200, top=300, left=300");
+        }
+    };
+    if (window.addEventListener) {
+        window.addEventListener("message", reverseMessage, false);
+    } else if (window.attachEvent)  {
+        window.attachEvent("onmessage", reverseMessage);
+    }
+
+    function reverseMessage(e) {
+        alert(e.data);
+    }
+};
+</script>
+</body>
+<html>

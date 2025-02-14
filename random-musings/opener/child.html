@@ -1,0 +1,13 @@
+<html>
+<head>
+<script>
+function sendMessage() {
+    window.opener.window.doAlert(document.getElementById("msg").value);
+}
+</script>
+</head>
+<body>
+<input type="text" id="msg"></input>
+<button onclick="sendMessage()">Send Message</button>
+</body
+</html>

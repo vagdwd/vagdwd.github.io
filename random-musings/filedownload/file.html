@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <script>
+    // generate the transcript here
+    function generateTranscript() {
+        return "This is my chat transcript!";
+    }
+    
+    function getDataEncoded() {
+        var transcript = generateTranscript();
+        if (navigator.appName == "Microsoft Internet Explorer") {
+            var ifrm = document.createElement('iframe');
+            ifrm.style.width = "0px";
+            ifrm.style.height = "0px";
+            ifrm.style.border = "0px";
+            ifrm.style.position = "absolute";
+            ifrm.style.top = "-50px";
+            document.body.appendChild(ifrm);
+            var ifrmWin = ifrm.contentWindow || ifrm.contentDocument;
+            ifrmWin.document.write(transcript);
+            ifrmWin.document.close();
+            ifrmWin.document.execCommand('SaveAs', true, 'chat_transcript.txt');
+        } else {
+            var a = document.createElement('a');
+            a.href = "data:Application/octet-stream;base64," + btoa(transcript); //SGVsbG8sIFdvcmxkIQ";
+            a.download = "chat_transcript.txt";
+            a.style.height = '0px';
+            a.style.width = '0px';
+            a.style.position = 'absolute';
+            a.style.top = '-10px';
+            document.body.appendChild(a);
+            fireEvent(a, 'click');
+        }
+    }
+    
+    function fireEvent(obj,evt){
+        var fireOnThis = obj;
+        if( document.createEvent ) {
+          var evObj = document.createEvent('MouseEvents');
+          evObj.initEvent( evt, true, false );
+          fireOnThis.dispatchEvent( evObj );
+
+        } else if( document.createEventObject ) {
+          var evObj = document.createEventObject();
+          fireOnThis.fireEvent( 'on' + evt, evObj );
+        }
+    }
+  </script>
+</head>    
+<body>
+  <a href="javascript: getDataEncoded();">Download</a>
+</body>
+</html>

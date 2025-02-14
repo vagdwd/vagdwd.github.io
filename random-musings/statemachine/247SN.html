@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+	<script type="text/javascript">
+		SN_247PSP = (function() {
+
+			var CONST_CDN_VERSION_KEY = "version";
+			var CONST_PSP_VERSION_KEY = "pspVersion";
+			var CONST_CLIENT_KEY = "key";
+			var CONST_CDN_PATH = "cdnPath";
+			var CONST_RESOURCE_KEY = "r";
+
+			var url = document.location.href;
+			var urlAndParamArr = url.split("#");
+			var pspVersion = "default";
+			var cdnVersion = null;
+			var clientkey = null;
+			var resource = null;
+			var cdnPath = null;
+
+			function initialize() {
+				if (urlAndParamArr.length <= 1) {
+					return;
+				}
+
+				var urlParams = urlAndParamArr[1].split("&");
+				for ( var i = 0; i < urlParams.length; i++) {
+					var keyvaluepair = urlParams[i].split("=");
+					if (keyvaluepair[0] == CONST_CDN_VERSION_KEY) {
+						cdnVersion = keyvaluepair[1];
+					} else if (keyvaluepair[0] == CONST_RESOURCE_KEY) {
+						resource = keyvaluepair[1];
+					} else if (keyvaluepair[0] == CONST_CLIENT_KEY) {
+						clientkey = keyvaluepair[1];
+					} else if (keyvaluepair[0] == CONST_PSP_VERSION_KEY) {
+						pspVersion = keyvaluepair[1];
+					} else if (keyvaluepair[0] == CONST_CDN_PATH) {
+						cdnPath = keyvaluepair[1];
+					}
+				}
+				var location_protocol = ((document.location.href.toLowerCase()
+						.indexOf("https") == 0) ? "https://" : "http://");
+				if (clientkey == null || resource == null) {
+					return;
+				}
+				var scriptUrl = location_protocol
+						+ cdnPath + clientkey
+						+ "/" + pspVersion;
+				if(cdnVersion != null)
+					scriptUrl = scriptUrl +  "/" + cdnVersion;
+				
+				scriptUrl = scriptUrl + "/" + resource;
+
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.id = "sn-" + resource;
+				script.src = scriptUrl;
+				document.body.appendChild(script);
+			}
+
+			initialize();
+		}());
+	</script>
+</body>
+</html>

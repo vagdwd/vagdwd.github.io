@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<script type="text/javascript" src="./json2.js"></script>
+<script type="text/javascript">
+
+if (typeof SN === "undefined") {
+    SN = {};
+}
+SN.CrossDomainChannel = (function () {
+    var onPostMessageCallback = null;
+    var endpoint;
+    var iframe, form;
+
+    function doPost(postData) {
+        // Add the iframe with a unique name
+        iframe = document.createElement("iframe");
+        var uniqueString = "pspxdframeforphp";
+        document.body.appendChild(iframe);
+        iframe.style.display = "none";
+        iframe.contentWindow.name = uniqueString;
+
+        // construct a form with hidden inputs, targeting the iframe
+        form = document.createElement("form");
+        form.target = uniqueString;
+        form.action = endpoint;
+        form.method = "POST";
+
+        // repeat for each parameter
+        for (var key in postData) {
+            form.appendChild(createInputElement(key, postData[key]));
+        }
+        form.appendChild(createInputElement("pt", location.protocol));
+        form.appendChild(createInputElement("pd", location.host));
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    function createInputElement(key, val) {
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = val;
+        return input;
+    }
+
+    function onPostMessage(e) {
+        if (typeof onPostMessageCallback == "function") {
+            onPostMessageCallback(e.data);
+        }
+        iframe.parentNode.removeChild(iframe);
+        form.parentNode.removeChild(form);
+    }
+
+    function init(ep, cb) {
+        if (window.addEventListener) {
+            window.addEventListener("message", onPostMessage, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onmessage", onPostMessage);
+        };
+        if (typeof cb == "function") {
+            onPostMessageCallback = cb;
+        }
+        endpoint = ep;
+    }
+    return {
+        init: init,
+        doPost: doPost
+    }
+})();
+
+SN.CrossDomainChannel.init('http://www.bar.com/tutorials/formpost/form.php', function (data) {
+	console.log(data);
+});
+</script>
+	</head>
+	<body>
+		<input type="button" id="button1" name="button1" value="Click me" onclick="SN.CrossDomainChannel.doPost({'key1':'val1', 'key2': 'val2', 'key3' : 'val3'});"/>
+	</body>
+</html>

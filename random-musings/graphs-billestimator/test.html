@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>gRaphaël Bar Chart - a stacked vs unstacked barchart example</title>
+        <script type="text/javascript" src="./prototype.js"></script>
+        <script type="text/javascript" src="./raphael.js"></script>
+    <body>
+		<div id="stackbargraphp">
+		</div>
+        <script type="text/javascript">
+			var data = $H({recurringcharges: [ 300, 350, 180, 300], taxes:[50, 75, 66, 78], onetimecharges: [ 100, 90, 150, 110], othercharges: [20, 10, 30, 40], credits: [20, 45, 60, 25]});
+			var data_keys = data.keys();
+			var data_labels = $H({recurringcharges:{title:"Recurring Charges",sub1:"Plan Charge",sub2:"Handset Charges"}, taxes:{title:"GST"}, onetimecharges:{title:"One Time Charges"}, credits:{title:"Credits"}, othercharges:{title:"Other Charges"}});
+			//var data = $H({allcharges: [ 50], tax:[50], recurringcharges: [ 100], credits: [20]});
+			var dataColorMap = ["#f0f0f0", "#a0a0a0", "#808080", "#606060", "#404040"];
+			var monthMap = ["Aug", "Sep", "Oct", "Nov"];
+			
+			var scaledData = $H();
+			var addedArray = [0,0,0,0];
+			data.each(function(pair) {
+				console.log(pair.key + ' = "' + pair.value + '"');
+				for (i=0;i<pair.value.length; i++) { 
+					addedArray[i] += pair.value[i];
+				}
+				console.log('addedArray = "' + addedArray + '"');
+			});
+			var maxInAddedArray = 0;
+			for (i=0;i<addedArray.length; i++) { 
+				maxInAddedArray = (addedArray[i]>maxInAddedArray)?addedArray[i]:maxInAddedArray;
+			}
+			console.log('maxInAddedArray = "' + maxInAddedArray + '"');
+			var scale = (maxInAddedArray-(maxInAddedArray%100)+100)/130;
+			console.log('scale = "' + scale + '"');
+			
+			//scalify all values
+			data.each(function(pair) {
+				console.log(pair.key + ' = "' + pair.value + '"');
+				var scaledArray = [];
+				for (i=0;i<pair.value.length; i++) { 
+					scaledArray[i] = pair.value[i]/scale;
+				}
+				scaledData.set(pair.key, scaledArray);
+				console.log('addedArray = "' + addedArray + '"');
+			});
+			console.log(scaledData.toJSON());
+
+			var dataForStackedBar = $H();
+			var stacked_data_array = scaledData.collect(
+				function (data_set) {
+					return data_set[1];
+				}
+			);
+			console.log("stacked_data_array = " + stacked_data_array.toJSON());
+			for (var i = stacked_data_array.length - 3; i >= 0; i--) {
+				for (var j = 0; j < stacked_data_array[0].length; j++) {
+					stacked_data_array[i][j] += stacked_data_array[i + 1][j];
+				}
+			}
+			for (var j = 0; j < stacked_data_array[stacked_data_array.length-1].length; j++) {
+				stacked_data_array[stacked_data_array.length-1][j] *= -1;
+			}
+			console.log("stacked_data_array = " + stacked_data_array.toJSON());
+
+			graphWidth = 37;
+			var paper = Raphael(document.getElementById("stackbargraphp"), 300, 200);
+			for (i=0; i <stacked_data_array[0].length;i++){
+				var stackBarData = stacked_data_array.collect(
+					function (data_set) {
+						return data_set[i];
+					}
+				);
+				colorCounter = 0;
+				console.log("stackBarData = " + stackBarData.toJSON());
+				for(j=0;j<stackBarData.length;j++){
+					var subvalue = stackBarData[j];
+					var c;
+					if (subvalue > 0) {
+						c = paper.rect(graphWidth,(maxInAddedArray/scale)-subvalue, 30, subvalue);
+						c.attr({fill: dataColorMap[colorCounter++], stroke: "none"});
+					} else {
+						c = paper.rect(graphWidth,(maxInAddedArray/scale), 30, -subvalue);						
+						c.attr({fill: dataColorMap[colorCounter++], stroke: "none"});
+					}
+					c.node.id = data_keys[j]+"-"+i;
+					c.node.onmouseover = function(event){
+						if ($(this.id + "-hovert")) {
+							$(this.id + "-hovert").raphael.show();
+							$(this.id + "-hoverr").raphael.show();
+						} else {
+							handleMouseOver(event, this);
+						}
+					};
+					c.node.onmouseout = function(event){
+						$(this.id + "-hoverr").raphael.hide();
+						$(this.id + "-hovert").raphael.hide();
+					};
+					console.log(subvalue);
+				};
+				graphWidth+=40;
+				colorCounter = 0;
+			}
+
+			function handleMouseOver(event, el) {
+				var ieOffset = (document.all)? 2:0;
+				var key = el.id.split("-")[0];
+				var index = parseInt(el.id.split("-")[1]);
+				var txt = data_labels.get(key)['title'] + " $" + data.get(key)[index];
+				var paper = el.raphael.paper;
+				var x = el.raphael.attrs.x+el.raphael.attrs.width;
+				var y = el.raphael.attrs.y+(el.raphael.attrs.height/2);
+				var hoverText =	paper.text(x+5, y+7+ieOffset, txt).attr({'text-anchor':'start'});
+				var hoverRect = paper.rect(x, y , ((txt.length)*5)+20, 15, 5).attr({fill:"#8cc6ff", stroke: "blue"});
+				hoverText.toFront();
+				hoverText.node.id = el.id + "-hovert";
+				hoverRect.node.id = el.id + "-hoverr";
+			}
+			
+			//draw x-axis, y axis and marginal axis
+			function drawAxis(v,v1,o) {
+				if (o == 1) {
+					var pathStr = createYPathStr(v,v1);
+				} else {
+					var pathStr = createXPathStr(v,v1);
+				}
+				var axis = paper.path(pathStr);
+			}
+			function createYPathStr (y,y1) {
+				var str = "M32 " + ((maxInAddedArray/scale)+32);
+				for (i=y+30;i>=y1;i=i-15) {
+					str = str + "L32 " + i + "L27 " + i + "M32 "+ i;
+					var marginalAxis = paper.path("M27 " + i +"L190 " + i).attr({stroke: "#d0d0d0"});
+					marginalAxis.toBack();
+					var txt = "";
+					if (y-i>0) { 
+						txt = "$" + Math.round((y-i)*scale);
+					} else {
+						txt = "-$" + -1*Math.round((y-i)*scale)
+					}
+					var t = paper.text(y1+12, i, txt).attr({'font-size':'9px'});
+					//t.attr({font-size:9});
+				}
+				str = str + "L32 " + y1;
+				return str;
+			}
+			function createXPathStr (x,x1) {
+				var str = "M32 " + (maxInAddedArray/scale);
+				for (i=x;i<=x1;i++) {
+					str = str + "L" + i +" " + (maxInAddedArray/scale) + "L" + i + " " + (maxInAddedArray/scale) + "M" + i + " " + (maxInAddedArray/scale);
+				}
+				return str;
+			}
+			drawAxis((maxInAddedArray/scale),0,1);
+			drawAxis(32,190,0);
+			
+			//write months
+			for (i=0;i<monthMap.length;i++) {
+				var t = paper.text(((i+1)*40)+10, 160, monthMap[i]);
+			}
+		</script>
+    </body>
+</html>

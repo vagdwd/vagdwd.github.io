@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<b>This iframe is located on a different origin</b>
+<div id="test">Send me a message!</div>
+<script>
+if (window.addEventListener) {
+    window.addEventListener("message", processMessage, false);
+} else if (window.attachEvent)  {
+    window.attachEvent("onmessage", processMessage);
+}
+
+function processMessage(e) {
+    document.getElementById("test").innerHTML = e.origin + " said: " + e.data;
+}
+</script>
+</body>
+<html>

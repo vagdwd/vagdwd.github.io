@@ -1,15 +1,128 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>I hate IE 8</title>
+        <title>My Portfolio</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+            header {
+                background-color: #4CAF50;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+                padding: 20px;
+            }
+            .profile {
+                text-align: center;
+                margin: 40px 0;
+            }
+            .profile img {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .profile h1 {
+                margin: 20px 0 10px;
+                font-size: 2.5em;
+            }
+            .profile p {
+                color: #666;
+                font-size: 1.2em;
+            }
+            .items {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin: 20px 0;
+            }
+            .item {
+                background: #fff;
+                margin: 10px;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 30%;
+                transition: transform 0.3s;
+            }
+            .item:hover {
+                transform: translateY(-10px);
+            }
+            .item img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+            .item h3 {
+                margin: 15px 0;
+                font-size: 1.5em;
+            }
+            .item p {
+                color: #666;
+                font-size: 1em;
+            }
+            .pdf-viewer {
+                width: 100%;
+                height: 600px;
+                border: 1px solid #ccc;
+                margin-bottom: 20px;
+            }
+            .pdf-link {
+                font-size: 1.2em;
+                color: #4CAF50;
+                text-decoration: none;
+            }
+            .pdf-link:hover {
+                text-decoration: underline;
+            }
+            footer {
+                background-color: #4CAF50;
+                color: #fff;
+                text-align: center;
+                padding: 20px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            }
+        </style>
     </head>
     <body>
-        <div id="browser_version_partially_combined-ww-monthly-201308-201502" width="800" height="600" style="width:800px; height: 600px;"></div>
-        <!-- You may change the values of width and height above to resize the chart -->
-        <p>Source:
-            <a href="http://gs.statcounter.com/#browser_version_partially_combined-ww-monthly-201308-201408">StatCounter Global Stats - Combine Chrome (all versions) & Firefox (5+) Market Share</a>
-        </p>
-        <script type="text/javascript" src="http://www.statcounter.com/js/FusionCharts.js"></script>
-        <script type="text/javascript" src="http://gs.statcounter.com/chart.php?browser_version_partially_combined-ww-monthly-201308-201502"></script>
+        <header>
+            <h1>My Portfolio</h1>
+        </header>
+        <div class="container">
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile Picture">
+                <h1>Vageesh Dwivedi</h1>
+                <p>Software Engineer | UX | Engineering Manager | Programmer</p>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <img src="item1.jpg" alt="item 1">
+                    <h3>Resume</h3>
+                    <iframe class="pdf-viewer" src="./Resume.pdf"></iframe>
+                    <p><a class="pdf-link" href="./Resume.pdf" target="_blank">View resume in a new tab</a></p>
+                </div>
+                <div class="item">
+                    <img src="item2.jpg" alt="item 2">
+                    <h3>Experiments</h3>
+                    <p><a class="pdf-link" href="./random-musings" target="_blank">View experiments in a new tab</a></p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2025 Vageesh Dwivedi. All rights reserved.</p>
+        </footer>
     </body>
 </html>
