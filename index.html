@@ -11,7 +11,7 @@
                 color: #333;
             }
             header {
-                background-color: #4CAF50;
+                background-color: #4c5eaf;
                 color: #fff;
                 padding: 20px 0;
                 text-align: center;
@@ -22,6 +22,7 @@
                 margin: auto;
                 overflow: hidden;
                 padding: 20px;
+                margin-bottom: 100px;
             }
             .profile {
                 text-align: center;
@@ -52,15 +53,15 @@
                 margin: 10px;
                 padding: 20px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                width: 30%;
+                width: 40%;
                 transition: transform 0.3s;
             }
             .item:hover {
                 transform: translateY(-10px);
             }
             .item img {
-                width: 100%;
-                height: auto;
+                width: 50px;
+                height: 50px;
                 border-radius: 5px;
             }
             .item h3 {
@@ -79,14 +80,14 @@
             }
             .pdf-link {
                 font-size: 1.2em;
-                color: #4CAF50;
+                color: #4c5eaf;
                 text-decoration: none;
             }
             .pdf-link:hover {
                 text-decoration: underline;
             }
             footer {
-                background-color: #4CAF50;
+                background-color: #4c5eaf;
                 color: #fff;
                 text-align: center;
                 padding: 20px 0;
@@ -103,21 +104,35 @@
         </header>
         <div class="container">
             <div class="profile">
-                <img src="profile.jpg" alt="Profile Picture">
+                <img src="./profile.jpg" alt="Profile Picture">
                 <h1>Vageesh Dwivedi</h1>
                 <p>Software Engineer | UX | Engineering Manager | Programmer</p>
             </div>
             <div class="items">
                 <div class="item">
-                    <img src="item1.jpg" alt="item 1">
-                    <h3>Resume</h3>
-                    <iframe class="pdf-viewer" src="./Resume.pdf"></iframe>
-                    <p><a class="pdf-link" href="./Resume.pdf" target="_blank">View resume in a new tab</a></p>
+                    <div style="display: flex; align-items: center;">
+                        <img src="./document-text.svg" alt="Resume" style="margin-right: 10px;">
+                        <h3>Resume</h3>
+                    </div>
+                    <iframe class="pdf-viewer" src="./resume-detailed.pdf"></iframe>
+                    <p><a class="pdf-link" href="./resume-detailed.pdf" target="_blank">View resume in a new tab</a></p>
                 </div>
                 <div class="item">
-                    <img src="item2.jpg" alt="item 2">
-                    <h3>Experiments</h3>
-                    <p><a class="pdf-link" href="./random-musings" target="_blank">View experiments in a new tab</a></p>
+                    <div style="display: flex; align-items: center;">
+                        <img src="./document-text.svg" alt="Resume" style="margin-right: 10px;">
+                        <h3>Experiments</h3>
+                    </div>
+                    <p><a class="pdf-link" href="./random-musings/chatwidget-fluid/chat.html" target="_blank">responsive widget</a></p>
+                    <p><a class="pdf-link" href="./random-musings/filedownload/file.html" target="_blank">file download</a></p>
+                    <p><a class="pdf-link" href="./random-musings/formpost/formpost.html" target="_blank">form post</a></p>
+                    <p><a class="pdf-link" href="./random-musings/graphs-billestimator/test.html" target="_blank">svg graph</a></p>
+                    <p><a class="pdf-link" href="./random-musings/heatmaps/index.html" target="_blank">heatmaps</a></p>
+                    <p><a class="pdf-link" href="./random-musings/iframetest/iframe.html" target="_blank">iframe tests</a></p>
+                    <p><a class="pdf-link" href="./random-musings/memoryleak/test1.html" target="_blank">js memoryleak</a></p>
+                    <p><a class="pdf-link" href="./random-musings/onmessage/parent.html" target="_blank">js message API</a></p>
+                    <p><a class="pdf-link" href="./random-musings/opener/opener.html" target="_blank">dom window opener</a></p>
+                    <p><a class="pdf-link" href="./random-musings/statemachine/demopage.html" target="_blank">js statemachine</a></p>
+                    <p><a class="pdf-link" href="./random-musings/visualization/index.html" target="_blank">visualization</a></p>
                 </div>
             </div>
         </div>
