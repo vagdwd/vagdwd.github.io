@@ -2,7 +2,7 @@
 <head>
 <script>
 function openChild() {
-    var winHandle = window.open('/opener/child.html', 'childwindow', 'height=400, width=600, dialog=true');
+    var winHandle = window.open('./opener/child.html', 'childwindow', 'height=400, width=600, dialog=true');
 }
 function doAlert(msg) {
     var el = document.getElementById("messagearea");
@@ -11,7 +11,7 @@ function doAlert(msg) {
 </script>
 </head>
 <body>
-<a href="/opener/opener1.html">Navigate Away</a>
+<a href="./opener/opener1.html">Navigate Away</a>
 <button onclick="openChild()">Open Child window</button>
 <div id="messagearea"></div>
 </body
