@@ -1,9 +1,30 @@
-var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+let db;
+const request = indexedDB.open('heatmapDB', 1);
+
+request.onerror = (event) => {
+  console.error('Database error:', event.target.error);
+};
+
+request.onupgradeneeded = (event) => {
+  db = event.target.result;
+  if (!db.objectStoreNames.contains('clickdata')) {
+    const store = db.createObjectStore('clickdata', { autoIncrement: true });
+    store.createIndex('url', 'url', { unique: false });
+  }
+};
+
+request.onsuccess = (event) => {
+  db = event.target.result;
+  console.log('Database opened successfully');
+  loadClickData();
+};
+
 var data = {
     max: 0,
     data: [],
     clickdata: []
 };
+
 var geodata = {
     max: 83,
     data: [{ x : 549 , y : 101 , count : 1 } ,
@@ -817,19 +838,6 @@ var geodata = {
 
 };
 var datamap = {};
-db.transaction(function(tx) {
-    // here be the transaction
-    // do SQL magic here using the tx object
-    var query = 'SELECT url,x,y,r FROM clickdata';
-    tx.executeSql(query, [], function(tx, results) {
-        var len = results.rows.length,
-            i;
-        for (i = 0; i < len; i++) {
-            data.clickdata.push(results.rows.item(i));
-        }
-        handleClickDataLoaded();
-    });
-});
 
 function handleClickDataLoaded() {
     for (var i = 0; i < data.clickdata.length; i++) {
@@ -857,6 +865,22 @@ function handleClickDataLoaded() {
         data.max = maxcount;
     };
 }
+
+function loadClickData() {
+    const transaction = db.transaction(['clickdata'], 'readonly');
+    const objectStore = transaction.objectStore('clickdata');
+    const request = objectStore.getAll();
+    request.onsuccess = function(event) {
+        data.clickdata = event.target.result;
+        handleClickDataLoaded();
+    };
+}
+
+request.onsuccess = (event) => {
+  db = event.target.result;
+  console.log('Database opened successfully');
+  loadClickData();
+};
 
 window.onload = function() {
     var xx = h337.create({

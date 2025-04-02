@@ -19,8 +19,8 @@
             if (evt.pageX && evt.pageY) {
                 eventPageX = evt.pageX,
                 eventPageY = evt.pageY;
-            } else if {
-                (evt.clientX !== null && doc.body !== nullvariable) eventPageY = doc.body,
+            } else if (evt.clientX !== null && doc.body !== nullvariable) {
+                eventPageY = doc.body,
                 eventPageX = evt.clientX + (docElement.scrollLeft || eventPageY.scrollLeft || 0) - (docElement.clientLeft || eventPageY.clientLeft || 0),
                 eventPageY = evt.clientY + (docElement.scrollTop || eventPageY.scrollTop || 0) - (docElement.clientTop || eventPageY.clientTop || 0);
             }
