@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fickleness of Requirements and Travesty of Software Design | Vageesh Dwivedi</title>
+  <meta name="description" content="Why changing requirements tempt teams into abandoning design discipline, the dangerous role of confirmation bias in architecture, and how to design for change rather than perfection.">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-brand">
+        <img src="../profile.jpg" alt="Vageesh Dwivedi" class="nav-avatar">
+        <span>Vageesh Dwivedi</span>
+      </a>
+      <div class="nav-actions">
+        <a href="../index.html#articles" class="btn btn-sm btn-secondary">← Back to Articles</a>
+        <a href="../index.html#scheduler" class="btn btn-sm btn-primary">Schedule Call</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--nav-height) + 40px); padding-bottom: 80px;">
+    <div class="container" style="max-width: 800px;">
+      <div style="margin-bottom: 32px;">
+        <span class="section-tag">System Design</span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; line-height: 1.25; margin-block: 14px 16px;">
+          Fickleness of Requirements and Travesty of Software Design
+        </h1>
+        <div style="display: flex; align-items: center; gap: 14px; color: var(--text-muted); font-size: 0.9rem;">
+          <img src="../profile.jpg" alt="Vageesh Dwivedi" style="width: 32px; height: 32px; border-radius: 50%;">
+          <span>Vageesh Dwivedi</span>
+          <span>•</span>
+          <span>February 18, 2025</span>
+          <span>•</span>
+          <span>4 min read</span>
+        </div>
+      </div>
+
+      <article class="article-reader-prose" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+        <p>Software design is a battlefield of changing requirements, stakeholder expectations, and the constant pressure to deliver on time. Engineers and architects often find themselves caught in an endless cycle of iteration, refactoring, and, at times, complete redesigns. But is this an unavoidable reality of the industry, or a failure in how we approach software design?</p>
+
+<h3>Fickleness of Requirements</h3>
+
+<p>In an ideal world, requirements would be well-defined, stable, and perfectly aligned with business needs. The reality, however, is not always a rosy journey. Requirements shift due to evolving market conditions, changing business priorities, and, quite often, the inability of stakeholders to articulate their needs upfront. Agile methodologies attempt to accommodate this by promoting iterative development, but even Agile cannot fully shield teams from the chaos of changing objectives.</p>
+
+<p>Frequent changes in requirements often lead to technical debt, rushed implementations, and a loss of design integrity. What starts as a well-structured system can quickly devolve into a fragile, tangled mess as developers scramble to retrofit new functionalities into an architecture that was never designed to support them.</p>
+
+<h3>Travesty of Software Design</h3>
+
+<p>When faced with rapidly changing requirements, some teams abandon structured design principles altogether, leading to what can only be described as a travesty of software design. Instead of a well-thought-out, scalable system, they end up with a patchwork of ad-hoc fixes and workarounds. The result? Codebases that are difficult to maintain, expensive to modify, and prone to failure.</p>
+
+<p>This travesty is not merely a technical issue—it has business implications as well. Poorly designed software slows down development velocity, increases operational costs, and ultimately hampers a company’s ability to innovate.</p>
+
+<h3>Role of Confirmation Bias</h3>
+
+<p>Another critical factor exacerbating poor software design is confirmation bias. Teams often become overly attached to initial design decisions, dismissing evidence that suggests a need for change. Developers and stakeholders alike may resist reevaluating architectural choices, favoring solutions that confirm their pre-existing beliefs rather than objectively analyzing the best approach. This cognitive bias leads to rigidity, preventing systems from adapting efficiently to evolving requirements and business needs.</p>
+
+<h3>A Definitive Takeaway: Design for Change, Not Perfection</h3>
+
+<p>If changing requirements are an unavoidable reality, then software design must adapt. Instead of resisting change, teams must embrace it by designing systems with flexibility in mind. Here are key principles to mitigate the impact of evolving requirements:</p>
+
+<ol>
+<li><strong>Modular Architecture</strong> – Design components to be loosely coupled and highly cohesive. This allows for isolated changes without breaking the entire system.</li>
+<li><strong>Domain-Driven Design</strong> – Align software structure with business domains to create a system that can evolve with business needs rather than against them.</li>
+<li><strong>Continuous Refactoring</strong> – Encourage a culture of refactoring as an ongoing process rather than an afterthought.</li>
+<li><strong>Automated Testing</strong> – Ensure that changes do not introduce regressions by investing in robust testing strategies.</li>
+<li><strong>Explicit Trade-offs</strong> – Recognize that no design is perfect. Make conscious trade-offs based on expected future changes rather than theoretical ideals.</li>
+<li><strong>Awareness of Confirmation Bias</strong> – Cultivate a mindset of adaptability by challenging assumptions and being open to alternative solutions when requirements shift.</li>
+</ol>
+
+<p>The fickleness of requirements does not have to lead to the travesty of software design. By acknowledging change as a fundamental characteristic of software development and designing for it, we can create systems that remain resilient, maintainable, and adaptable in the face of uncertainty.</p>
+
+<p>My inspiration to write this article came from a related YouTube playlist. Thanks, Markus in assimilating a playlist.</p>
+      </article>
+
+      <div style="border-top: 1px solid var(--border-subtle); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="https://www.linkedin.com/pulse/fickleness-requirements-travesty-software-design-vageesh-dwivedi-l8xxc" target="_blank" rel="noopener" class="btn btn-secondary">
+          View Original on LinkedIn Pulse ↗
+        </a>
+        <a href="../index.html#scheduler" class="btn btn-primary">
+          Schedule Advisory Session
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

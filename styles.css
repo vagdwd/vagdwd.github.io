@@ -1130,15 +1130,15 @@ img, svg {
 
 .articles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
 }
 
 .article-card {
   background: var(--surface-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 26px 20px;
   backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
@@ -1154,71 +1154,60 @@ img, svg {
   background: var(--surface-card-hover);
 }
 
-/* Native Ad / Sponsored Card - Identical Layout, Perfectly Blended */
-.article-card.native-sponsored {
-  position: relative;
-}
-
-.article-card.native-sponsored::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, transparent 50%, rgba(99, 102, 241, 0.15) 50%);
-  border-top-right-radius: var(--radius-lg);
-  pointer-events: none;
-}
-
 .article-meta-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   margin-bottom: 16px;
-  font-size: 0.8rem;
+  min-width: 0;
 }
 
 .article-category {
   font-family: var(--font-mono);
+  font-size: 0.725rem;
   font-weight: 600;
-  padding: 4px 10px;
+  letter-spacing: 0.01em;
+  padding: 3px 8px;
   border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.05);
   color: #818cf8;
   border: 1px solid var(--border-subtle);
-}
-
-/* Native sponsored badge formatted subtly like category pills */
-.article-category.sponsored-label {
-  color: var(--accent-cyan);
-  background: rgba(6, 182, 212, 0.08);
-  border-color: rgba(6, 182, 212, 0.2);
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.4;
 }
 
 .article-meta-right {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 0.75rem;
 }
 
 .article-date {
   font-family: var(--font-mono);
-  font-size: 0.775rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .meta-separator {
   opacity: 0.4;
   font-size: 0.75rem;
+  line-height: 1;
 }
 
 .article-read-time {
   color: var(--text-muted);
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 .article-title {

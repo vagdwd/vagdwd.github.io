@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cobra (or Copilot) Effect | Vageesh Dwivedi</title>
+  <meta name="description" content="From colonial Delhi bounties and Afghan opium to AI coding assistants: how perverse incentives in GenAI and 'vibe coding' risk degrading fundamental engineering mastery.">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-brand">
+        <img src="../profile.jpg" alt="Vageesh Dwivedi" class="nav-avatar">
+        <span>Vageesh Dwivedi</span>
+      </a>
+      <div class="nav-actions">
+        <a href="../index.html#articles" class="btn btn-sm btn-secondary">← Back to Articles</a>
+        <a href="../index.html#scheduler" class="btn btn-sm btn-primary">Schedule Call</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--nav-height) + 40px); padding-bottom: 80px;">
+    <div class="container" style="max-width: 800px;">
+      <div style="margin-bottom: 32px;">
+        <span class="section-tag">AI & Incentives</span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; line-height: 1.25; margin-block: 14px 16px;">
+          The Cobra (or Copilot) Effect
+        </h1>
+        <div style="display: flex; align-items: center; gap: 14px; color: var(--text-muted); font-size: 0.9rem;">
+          <img src="../profile.jpg" alt="Vageesh Dwivedi" style="width: 32px; height: 32px; border-radius: 50%;">
+          <span>Vageesh Dwivedi</span>
+          <span>•</span>
+          <span>March 12, 2025</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+      </div>
+
+      <article class="article-reader-prose" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+        <h3>A Classic Case of Perverse Incentives (coined by economist Horst Siebert) [1]</h3>
+
+<p>The infamous "Cobra Effect" anecdote from colonial Delhi provides a powerful, enduring illustration of a perverse incentive: a seemingly logical incentive that, in practice, produces the opposite effect of what was intended. The British, seeking to reduce the cobra population, offered a bounty for every dead cobra brought in. The unintended consequence? Resourceful individuals began <em>breeding</em> cobras specifically to collect the bounty. When the government, realizing the folly of their policy, rescinded the reward, these cobra breeders, now faced with a worthless "asset", simply released the snakes, resulting in a significantly <em>larger</em> cobra population than before.</p>
+
+<p>We saw a strikingly similar dynamic unfold during the Afghanistan War. To curb opium production, British forces implemented a program to pay farmers for destroying their poppy fields (as extensively documented by the Washington Post) [2]. The result was a perverse incentive of epic proportions: farmers were incentivized to <em>maximize</em> poppy cultivation, not reduce it, to claim the compensation for destroying their expanded crops. This counterproductive outcome mirrored the Cobra Effect almost perfectly.</p>
+
+<p>These examples, spanning centuries and vastly different contexts, underscore the vital importance of deeply understanding human behavior and anticipating the full spectrum of potential unintended consequences when designing policies or capabilities, economic or even technological.</p>
+
+<p>Are we seeing a similar phenomenon with the widespread adoption of AI tools? AI, like ChatGPT, Copilot, and code generation models, was initially heralded as a productivity booster to empower developers and other professionals. And indeed, 2023 and 2024 saw the entire industry doing song and dance showcasing and encouraging their use [3].</p>
+
+<p>But now, the pendulum seems to be swinging. We're seeing interview processes where candidates are asked to share their screens and use "Ctrl+Tab" (or "Cmd+Tab") to prove they're not relying on AI for answers. Companies like <a href="http://LightScreen.ai?trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">LightScreen.ai</a> recently incubated at YCombinator [4], explicitly marketing themselves as a way to filter out candidates who might be "over-relying" on AI. There's a growing sense of unease as depicted in LinkedIn posts, encapsulated in pathetic memes about developers who "can't code on their own" anymore or blindly saying "Dumb get dumber" [5]. There is a clear divide in the industry at this time.</p>
+
+<p>This raises crucial questions:</p>
+
+<ul>
+<li>Are we inadvertently creating a perverse incentive where genuine skill development is discouraged in favor of superficial AI-assisted performance?</li>
+<li>Are hiring practices that focus on <em>detecting</em> AI use (which is easily circumvented, e.g., using a separate device – think newsroom teleprompters!) measuring competence? Or just measuring compliance to some rule?</li>
+<li>Shouldn't we focus on evaluating the <em>value and impact</em> a candidate can bring, regardless of the tools they use?</li>
+<li>Are we repeating past errors like the ones above and creating a different set of problems?</li>
+</ul>
+
+<p>Consider other industries. Airline autopilots have been used for decades to enhance safety and efficiency, not to replace the pilot's expertise. Tesla's Full Self-Driving (FSD) system, while advanced, <em>penalizes</em> drivers for <em>not</em> paying attention – it's designed to <em>augment</em>, not replace, human oversight. The focus is on the <em>outcome</em> (safe and efficient flight/driving), not on rigidly policing the <em>method</em>. Shouldn't we apply the same principle to the use of AI in other fields, including software development? Our intentions should be to <strong>embrace and reward the value or impact created</strong>, not to punish the use of tools that can enhance productivity and innovation.</p>
+
+<p>A new term is also doing rounds on social media called <strong>"Vibe Coding"</strong>. A term coined by Andrej Karpathy just a few weeks ago (on <strong>February 6th, 2024</strong>) and has since been featured in the New York Times, Ars Technica, the Guardian, and countless online discussions including a Y Combinator webcast Lightcone [7]. The industry is reflecting on Karpathy's post on X which also defines in his own interpretation [8]. There are various interpretations of the true meaning or intention of the word "vibe" and I feel it's about the human thoughts and feelings that the developer experiences while using the generated code. Coding can include faster iterations, fail faster, and experimentation as described as "exponentials" by Karpathy. Cursor Editor and VSCode with copilot were state of art till last year, but the complete realization comes in <a href="https://v0.dev/?trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">V0 tool</a> by Vercel. Though V0 launched in 2024, their X handle already claims it to be a "<strong>Full Stack Vibe Coding Platform</strong>".</p>
+
+<p>We must consistently ask ourselves:</p>
+
+<ul>
+<li>What are the actual, real-world incentives we're creating, not just the intended ones?</li>
+<li>How might individuals and businesses, acting in their own perceived self-interest, exploit or circumvent the system?</li>
+<li>Are we genuinely addressing the root cause of the problem, or are we merely treating a symptom, potentially creating new problems in the process?</li>
+<li>Who ultimately benefits from this enablement, and who bears the burden of its costs, both direct and indirect?</li>
+<li>What are the second, third, and even fourth-order effects that might ripple through the system?</li>
+</ul>
+
+<p>Perverse incentives are a powerful and often insidious force in shaping human behavior and economic outcomes. Ignoring them, or failing to adequately account for them, can lead to disastrous and deeply counterproductive results, whether in the realm of pest control, drug policy, technology, or any other area of human endeavor. The Cobra Effect serves as a timeless reminder of the need for careful, nuanced, and system-wide thinking.</p>
+
+<p>[1] - <a href="https://en.wikipedia.org/wiki/Perverse_incentive?trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">Perverse Incentive on wikipedia</a></p>
+
+<p>[2] - <a href="https://www.washingtonpost.com/graphics/2019/investigations/afghanistan-papers/afghanistan-war-opium-poppy-production?trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">Afghanistan papers on Washington post</a></p>
+
+<p>[3] - <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier?trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">Potential of Generative AI on productivity - Mckinsey</a></p>
+
+<p>[4] - <a href="https://www.ycombinator.com/companies/lightscreen-ai?trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">Lightscreen.ai at YCombinator</a></p>
+
+<p>[5] - <a href="https://www.linkedin.com/posts/jiten-karnani-0b572717_dumb-getting-dumber-since-its-launch-activity-7305415942346334208-fBfz?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAIDZ7cBQXWrzkCfUjgT8Vxedx56hwZuESc&amp;trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">Linkedin post saying "Dumb get dumber" on usage of AI tools.</a></p>
+
+<p>[6] - <a href="https://www.linkedin.com/posts/stanpeev_we-hired-the-laziest-engineer-i-have-ever-activity-7303445074275680257-FDIB?trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">LinkedIn Post showcasing AI Assistive Tools in negative light</a></p>
+
+<p>[7] - <a href="https://www.youtube.com/watch?v=IACHfKmZMr8&amp;trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">Vibe Coding Is The Future on Youtube</a></p>
+
+<p>[8] - <a href="https://x.com/karpathy/status/1886192184808149383?trk=article-ssr-frontend-pulse_little-text-block" rel="noopener" target="_blank">Karpathy's post on X.com</a></p>
+
+<p>What are your thoughts on the potential for perverse incentives in the age of AI? Share your perspectives in the comments!</p>
+      </article>
+
+      <div style="border-top: 1px solid var(--border-subtle); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="https://www.linkedin.com/pulse/cobra-copilot-effect-vageesh-dwivedi-kqmoc/" target="_blank" rel="noopener" class="btn btn-secondary">
+          View Original on LinkedIn Pulse ↗
+        </a>
+        <a href="../index.html#scheduler" class="btn btn-primary">
+          Schedule Advisory Session
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
