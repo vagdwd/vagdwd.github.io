@@ -1,149 +1,1719 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My Portfolio</title>
-        <style>
-            body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f4;
-                color: #333;
-            }
-            header {
-                background-color: #4c5eaf;
-                color: #fff;
-                padding: 20px 0;
-                text-align: center;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            .container {
-                width: 80%;
-                margin: auto;
-                overflow: hidden;
-                padding: 20px;
-                margin-bottom: 100px;
-            }
-            .profile {
-                text-align: center;
-                margin: 40px 0;
-            }
-            .profile img {
-                border-radius: 50%;
-                width: 150px;
-                height: 150px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-            .profile h1 {
-                margin: 20px 0 10px;
-                font-size: 2.5em;
-            }
-            .profile p {
-                color: #666;
-                font-size: 1.2em;
-            }
-            .items {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                margin: 20px 0;
-            }
-            .item {
-                background: #fff;
-                margin: 10px;
-                padding: 20px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                width: 40%;
-                transition: transform 0.3s;
-            }
-            .item:hover {
-                transform: translateY(-10px);
-            }
-            .item img {
-                width: 50px;
-                height: 50px;
-                border-radius: 5px;
-            }
-            .item h3 {
-                margin: 15px 0;
-                font-size: 1.5em;
-            }
-            .item p {
-                color: #666;
-                font-size: 1em;
-            }
-            .pdf-viewer {
-                width: 100%;
-                height: 600px;
-                border: 1px solid #ccc;
-                margin-bottom: 20px;
-            }
-            .pdf-link {
-                font-size: 1.2em;
-                color: #4c5eaf;
-                text-decoration: none;
-            }
-            .pdf-link:hover {
-                text-decoration: underline;
-            }
-            footer {
-                background-color: #4c5eaf;
-                color: #fff;
-                text-align: center;
-                padding: 20px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>My Portfolio</h1>
-        </header>
-        <div class="container">
-            <div class="profile">
-                <img src="./profile.jpg" alt="Profile Picture">
-                <h1>Vageesh Dwivedi</h1>
-                <p>Software Engineer | UX | Engineering Leader | Programmer</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Vageesh Dwivedi | AI & ML Engineering Leader • Director of Engineering</title>
+  <meta name="title" content="Vageesh Dwivedi | AI & ML Engineering Leader • Director of Engineering">
+  <meta name="description" content="Personal site of Vageesh Dwivedi: AI & ML Engineering Leader, Director of Engineering. 20+ years building enterprise Generative AI, Microsoft AutoGen agentic systems, RAG, and cloud-native Kubernetes platforms. Book a 1:1 call, explore technical experiments, and read published engineering articles.">
+  <meta name="keywords" content="Vageesh Dwivedi, vagdwd, AI Engineering Leader, Director of Engineering, Generative AI, AutoGen, Multi-agent systems, RAG, Kubernetes, Cloud Cost Optimization, Conversational AI, React, Livability Index">
+  <meta name="author" content="Vageesh Dwivedi">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vagdwd.github.io/">
+  <meta property="og:title" content="Vageesh Dwivedi | AI & ML Engineering Leader">
+  <meta property="og:description" content="20+ years scaling enterprise AI, agentic systems, and cloud architectures. Book a 1:1 meeting, explore interactive code experiments, and read technical insights.">
+  <meta property="og:image" content="https://vagdwd.github.io/profile.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://vagdwd.github.io/">
+  <meta property="twitter:title" content="Vageesh Dwivedi | AI & ML Engineering Leader">
+  <meta property="twitter:description" content="20+ years scaling enterprise AI, agentic systems, and cloud architectures. Book a 1:1 meeting, explore interactive code experiments, and read technical insights.">
+  <meta property="twitter:image" content="https://vagdwd.github.io/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="./profile.jpg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Navigation Bar
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Vageesh Dwivedi Home">
+        <img src="./profile.jpg" alt="Vageesh Dwivedi" class="nav-avatar">
+        <span>Vageesh Dwivedi</span>
+        <span class="nav-badge-dot" title="Available for advisory & consultations"></span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About & Resume</a></li>
+          <li><a href="#experiments" class="nav-link">Experiments</a></li>
+          <li><a href="#articles" class="nav-link">Articles & Insights</a></li>
+          <li><a href="#scheduler" class="nav-link">Book a Call</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#scheduler" class="btn btn-sm btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Schedule Call
+        </a>
+
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle dark/light theme" aria-label="Toggle theme">
+          <span id="theme-toggle-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div id="mobile-menu" style="display:none;" class="mobile-menu-drawer">
+    <div style="padding: 20px; display: flex; flex-direction: column; gap: 16px;">
+      <a href="#about" class="nav-link">About & Resume</a>
+      <a href="#experiments" class="nav-link">Experiments</a>
+      <a href="#articles" class="nav-link">Articles & Insights</a>
+      <a href="#scheduler" class="nav-link">Book a Call</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         Hero Section: Executive Profile
+         ====================================================================== -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="hero-status">
+              <span class="hero-status-pulse"></span>
+              <span>Director of Engineering @ Movius • Ex-247.ai, Infosys</span>
             </div>
-            <div class="items">
-                <div class="item">
-                    <!-- Google Calendar Appointment Scheduling begin -->
-                    <iframe src="https://calendar.google.com/calendar/appointments/AcZssZ1phGGQ8JB64ebxZzw7HQbjwirsMHS6s5yjE2w=?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
-                    <!-- end Google Calendar Appointment Scheduling -->
-                </div>
-                <div class="item">
-                    <div style="display: flex; align-items: center;">
-                        <img src="./document-text.svg" alt="Resume" style="margin-right: 10px;">
-                        <h3>Resume</h3>
-                    </div>
-                    <iframe class="pdf-viewer" src="./resume-detailed.pdf"></iframe>
-                    <p><a class="pdf-link" href="./resume-detailed.pdf" target="_blank">View resume in a new tab</a></p>
-                </div>
-                <div class="item">
-                    <div style="display: flex; align-items: center;">
-                        <img src="./document-text.svg" alt="Resume" style="margin-right: 10px;">
-                        <h3>Experiments</h3>
-                    </div>
-                    <p><a class="pdf-link" href="./random-musings/livability-index/" target="_blank">livability index</a></p>
-                    <p><a class="pdf-link" href="./random-musings/chatwidget-fluid/chat.html" target="_blank">responsive widget</a></p>
-                    <p><a class="pdf-link" href="./random-musings/filedownload/file.html" target="_blank">file download</a></p>
-                    <p><a class="pdf-link" href="./random-musings/formpost/formpost.html" target="_blank">form post</a></p>
-                    <p><a class="pdf-link" href="./random-musings/graphs-billestimator/test.html" target="_blank">svg graph</a></p>
-                    <p><a class="pdf-link" href="./random-musings/heatmaps/index.html" target="_blank">heatmaps</a></p>
-                    <p><a class="pdf-link" href="./random-musings/iframetest/iframe.html" target="_blank">iframe tests</a></p>
-                    <p><a class="pdf-link" href="./random-musings/memoryleak/test1.html" target="_blank">js memoryleak</a></p>
-                    <p><a class="pdf-link" href="./random-musings/onmessage/parent.html" target="_blank">js message API</a></p>
-                    <p><a class="pdf-link" href="./random-musings/opener/opener.html" target="_blank">dom window opener</a></p>
-                    <p><a class="pdf-link" href="./random-musings/statemachine/demopage.html" target="_blank">js statemachine</a></p>
-                    <p><a class="pdf-link" href="./random-musings/visualization/index.html" target="_blank">visualization</a></p>
-                </div>
+
+            <h1 class="hero-name">Vageesh Dwivedi</h1>
+            
+            <div class="hero-title-role">
+              <span>AI & ML Engineering Leader</span>
+              <span style="color: var(--text-muted);">/</span>
+              <span>Systems & UX Architect</span>
             </div>
+
+            <p class="hero-lead">
+              Visionary engineering leader with <strong>20+ years of experience</strong> architecting enterprise-grade Generative AI, Microsoft AutoGen multi-agent orchestration, RAG platforms, and cloud-native Kubernetes infrastructure serving millions of global users.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#scheduler" class="btn btn-lg btn-primary btn-glow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Schedule a 1:1 Meeting
+              </a>
+
+              <a href="#about" id="open-resume-hero-btn" class="btn btn-lg btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                View Resume
+              </a>
+
+              <button class="btn btn-lg btn-secondary" data-copy="vageesh.dwivedi@gmail.com" title="Click to copy email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Copy Email
+              </button>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://github.com/vagdwd" target="_blank" rel="noopener" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub @vagdwd</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/vageesh-dwivedi/" target="_blank" rel="noopener" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>LinkedIn @vageesh-dwivedi</span>
+              </a>
+
+              <a href="mailto:vageesh.dwivedi@gmail.com" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                </svg>
+                <span>Email Vageesh</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="avatar-wrapper">
+              <img src="./profile.jpg" alt="Vageesh Dwivedi Headshot" class="avatar-img">
+              <div class="hero-badge-float">
+                <span class="nav-badge-dot"></span>
+                <span>Silicon Valley, CA • PST</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <footer>
-            <p>&copy; 2025 Vageesh Dwivedi. All rights reserved.</p>
-        </footer>
-    </body>
+
+        <!-- High-Impact Metric Strip -->
+        <div class="hero-stats-row">
+          <div class="stat-card">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Years of Engineering Leadership & Innovation</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">40%</div>
+            <div class="stat-label">Cloud Cost Reduction via K8s & Swarm</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">10M+</div>
+            <div class="stat-label">Enterprise Conversational AI Users Served</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">13+</div>
+            <div class="stat-label">Open Tech Experiments & Benchmarks</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Purpose 1: Meeting Scheduler Section
+         ====================================================================== -->
+    <section class="section scheduler-section" id="scheduler">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            Meeting Scheduler
+          </div>
+          <h2 class="section-title">Schedule a 1:1 Consultation or Advisory</h2>
+          <p class="section-subtitle">
+            Book directly on my calendar below. Whether you want to discuss enterprise GenAI strategy, multi-agent flows, cloud infrastructure optimization, or explore an engineering leadership role—let’s connect.
+          </p>
+        </div>
+
+        <div class="scheduler-grid">
+          <!-- Left: Information & Agenda Card -->
+          <div class="scheduler-info-card">
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 8px;">Let's Talk High-Impact Engineering</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+              Select a suitable slot on Google Calendar to reserve time. All calendar invites include a secure Google Meet link automatically.
+            </p>
+
+            <div class="schedule-reasons">
+              <div class="reason-item">
+                <div class="reason-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <div class="reason-content">
+                  <h4>GenAI & Agentic Systems Advisory</h4>
+                  <p>Microsoft AutoGen multi-agent architectures, RAG pipelines, LiteLLM/vLLM hosting, and prompt evaluation tooling.</p>
+                </div>
+              </div>
+
+              <div class="reason-item">
+                <div class="reason-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                  </svg>
+                </div>
+                <div class="reason-content">
+                  <h4>Cloud Infrastructure & Cost Tuning</h4>
+                  <p>Slashing cloud bills, migrating workloads to Kubernetes, setting up declarative CI/CD, and scaling microservices.</p>
+                </div>
+              </div>
+
+              <div class="reason-item">
+                <div class="reason-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <div class="reason-content">
+                  <h4>Enterprise Conversational UI & SDKs</h4>
+                  <p>Designing cross-channel message frameworks (Apple, Google, Twilio), low-code builder tools, and web/mobile SDKs.</p>
+                </div>
+              </div>
+
+              <div class="reason-item">
+                <div class="reason-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="reason-content">
+                  <h4>Leadership & Mentorship</h4>
+                  <p>Leading global distributed teams, technical career growth, hiring senior talent, and scaling engineering organizations.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="scheduler-meta-box">
+              <div class="scheduler-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+                <span>Timezone: US Pacific (PST/PDT) — Flexible across international timezones</span>
+              </div>
+              <div class="scheduler-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Direct Contact: <a href="mailto:vageesh.dwivedi@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">vageesh.dwivedi@gmail.com</a></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Google Calendar Appointment Embed -->
+          <div class="scheduler-embed-card">
+            <div class="embed-topbar">
+              <div class="embed-topbar-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Google Calendar Appointment Scheduling</span>
+              </div>
+              <div class="embed-actions">
+                <a href="https://calendar.google.com/calendar/appointments/AcZssZ1phGGQ8JB64ebxZzw7HQbjwirsMHS6s5yjE2w=?gv=true" target="_blank" rel="noopener" class="btn btn-sm btn-secondary" title="Open in new window">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  New Window
+                </a>
+              </div>
+            </div>
+
+            <div class="calendar-iframe-wrapper">
+              <!-- Verified Google Calendar Appointment Scheduling Link -->
+              <iframe 
+                src="https://calendar.google.com/calendar/appointments/AcZssZ1phGGQ8JB64ebxZzw7HQbjwirsMHS6s5yjE2w=?gv=true" 
+                title="Schedule an Appointment with Vageesh Dwivedi"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Purpose 2: Profile & Resume Section
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Profile & Career History
+          </div>
+          <h2 class="section-title">Leadership, Experience & Skills</h2>
+          <p class="section-subtitle">
+            Two decades of building, scaling, and operating high-throughput enterprise systems, Generative AI applications, and engineering teams.
+          </p>
+        </div>
+
+        <!-- Resume Tabs Navigation -->
+        <div class="resume-tabs-nav" role="tablist">
+          <button class="resume-tab-btn active" data-tab="experience" role="tab" aria-selected="true">
+            Work Experience
+          </button>
+          <button class="resume-tab-btn" data-tab="skills" role="tab" aria-selected="false">
+            Core Competencies
+          </button>
+          <button class="resume-tab-btn" data-tab="projects" role="tab" aria-selected="false">
+            Key Architectural Achievements
+          </button>
+        </div>
+
+        <!-- Tab 1: Work Experience Timeline -->
+        <div class="resume-tab-pane active" id="tab-experience" role="tabpanel">
+          <div class="timeline">
+
+            <!-- Movius -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Director, Engineering</h3>
+                    <div class="timeline-company">Movius Interactive Corp • Fremont, CA</div>
+                  </div>
+                  <span class="timeline-date">May 2025 – Present</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Leading a 10-person global engineering team building and scaling Partner Integrations using secure Messaging APIs across Salesforce, Dynamics 365, Zoom, and MS Teams.</li>
+                  <li>Created and executing org-wide AI adoption strategy: vendor selection, security/risk governance, team coaching, token consumption optimization, and quota management through observational telemetry.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 247.ai Director -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Director Software Development</h3>
+                    <div class="timeline-company">247.ai Inc • Campbell, CA</div>
+                  </div>
+                  <span class="timeline-date">Nov 2015 – Jan 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Led a 24-engineer global organization across three geographies building enterprise-scale AI-powered Conversational AI SaaS serving millions of users across digital and voice channels.</li>
+                  <li>Pioneered AI/ML initiatives implementing RAG-based Q&A systems and Microsoft AutoGen-powered agentic flows, reducing agent onboarding time by 30% and average handling time (AHT) by 10%.</li>
+                  <li>Reduced cloud infrastructure costs by 40% through a strategic containerization initiative, migrating legacy VMs to Docker Swarm and Kubernetes with declarative CI/CD pipelines.</li>
+                  <li>Revolutionized virtual assistant development by delivering a designer-focused low-code platform, reducing dev effort by 75% and accelerating release cycles by 60–80%.</li>
+                  <li>Partnered with Apple (Messages for Business), Google (Business Messages), and Twilio to build an enterprise omnichannel messaging platform, driving a 60% operational cost drop for Fortune 500 retailers.</li>
+                  <li>Architected cross-platform React Native and React.js SDKs, cutting customer integration launch timelines by 70%.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 247.ai Manager -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Manager Software Development</h3>
+                    <div class="timeline-company">247.ai Inc • Bengaluru, India</div>
+                  </div>
+                  <span class="timeline-date">Dec 2010 – Nov 2015</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Built and led a high-performing engineering team from scratch, establishing Agile release cycles and product feedback loops.</li>
+                  <li>Spearheaded transition of core frontend frameworks from legacy Prototype.js to high-speed native JavaScript implementations.</li>
+                  <li>Engineered cross-browser enterprise solutions ensuring rock-solid compatibility across IE7/8 and early mobile operating systems.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Infosys -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Technology Lead</h3>
+                    <div class="timeline-company">Infosys • Bengaluru, India</div>
+                  </div>
+                  <span class="timeline-date">May 2008 – Dec 2010</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Led QA engineering and automation for Yahoo! advertising contracts and guaranteed delivery ad systems using Shell and Perl automation.</li>
+                  <li>Developed high-throughput ad tracking and logging modules using C/C++, Apache server modules, and Linux socket utilities.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Bachelor of Technology (B.Tech) — Electrical & Electronics</h3>
+                    <div class="timeline-company">National Institute of Technology (NIT), Tiruchirappalli, India</div>
+                  </div>
+                  <span class="timeline-date">Class of 2004</span>
+                </div>
+                <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 6px;">
+                  Comprehensive foundation in computer engineering, digital circuits, control systems, and computational algorithms.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 2: Core Competencies -->
+        <div class="resume-tab-pane" id="tab-skills" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-category-card">
+              <div class="skill-cat-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-primary);">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7.003 7.003 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7.003 7.003 0 0 1 11 5.07V5a1 1 0 0 1 2 0v.07A7.003 7.003 0 0 1 18.93 11H19a1 1 0 0 1 0 2h-.07A7.003 7.003 0 0 1 13 16.93z"></path>
+                </svg>
+                AI & Machine Learning
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Microsoft AutoGen</span>
+                <span class="skill-chip">Multi-Agent Systems</span>
+                <span class="skill-chip">RAG Pipelines</span>
+                <span class="skill-chip">LangChain & LlamaIndex</span>
+                <span class="skill-chip">vLLM & LiteLLM</span>
+                <span class="skill-chip">Promptfoo & Langfuse</span>
+                <span class="skill-chip">Vector Search (pgvector)</span>
+                <span class="skill-chip">Intent Classification</span>
+                <span class="skill-chip">Embedding Models</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+                Cloud & Distributed Systems
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Kubernetes (K8s)</span>
+                <span class="skill-chip">Docker & Swarm</span>
+                <span class="skill-chip">Cloud Cost Optimization</span>
+                <span class="skill-chip">Google Cloud Platform (GCP)</span>
+                <span class="skill-chip">Microsoft Azure</span>
+                <span class="skill-chip">CI/CD Automation</span>
+                <span class="skill-chip">Microservices Architecture</span>
+                <span class="skill-chip">Prometheus & Grafana</span>
+                <span class="skill-chip">Zero Trust & Compliance</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-emerald);">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                Frontend & Enterprise SDKs
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">JavaScript (ES2024+)</span>
+                <span class="skill-chip">React & Redux</span>
+                <span class="skill-chip">React Native (iOS/Android)</span>
+                <span class="skill-chip">Node.js</span>
+                <span class="skill-chip">HTML5 Canvas & SVG</span>
+                <span class="skill-chip">Design Systems (TFS-UI)</span>
+                <span class="skill-chip">WCAG 2.1 Accessibility</span>
+                <span class="skill-chip">Cross-Domain Messaging</span>
+                <span class="skill-chip">V8 Performance Profiling</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-purple);">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Leadership & Process
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Cross-Functional Leadership</span>
+                <span class="skill-chip">Team Scaling & Mentorship</span>
+                <span class="skill-chip">Multi-Geo Orchestration</span>
+                <span class="skill-chip">Outcome-Oriented Roadmap</span>
+                <span class="skill-chip">Conflict Resolution</span>
+                <span class="skill-chip">SLA & Incident Management</span>
+                <span class="skill-chip">Enterprise Partner Delivery</span>
+                <span class="skill-chip">Vendor & Budget Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Key Architectural Achievements -->
+        <div class="resume-tab-pane" id="tab-projects" role="tabpanel">
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 class="timeline-role">AutoGen Agentic Flows & Enterprise Concierge</h3>
+                  <span class="timeline-date">[24]7 Concierge</span>
+                </div>
+                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                  Architected multi-agent collaboration flows using Microsoft AutoGen, orchestrating autonomous AI bots and human agents. The platform dynamically delegates routine tasks to AI while escalating complex edge cases to human specialists with enriched conversation memory.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 class="timeline-role">40% Cloud Cost Reduction via Kubernetes</h3>
+                  <span class="timeline-date">GCP, Azure & On-Prem</span>
+                </div>
+                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                  Executed a two-phase infrastructure overhaul. First containerized Java and Node.js applications into Docker Swarm, then transitioned workloads to Kubernetes with declarative GitOps pipelines, cutting overall cloud spend by 40% and boosting release velocity by 60%.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 class="timeline-role">Unified Omnichannel Messaging Platform</h3>
+                  <span class="timeline-date">Apple, Google & Twilio</span>
+                </div>
+                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                  Led an engineering team of 12 integrating Apple Messages for Business, Google Business Messaging, and Twilio SMS. Designed an adaptive content framework that automatically translated backend responses into rich channel-specific widgets, reducing launch time by 80%.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 class="timeline-role">TFS-UI Enterprise Component Framework</h3>
+                  <span class="timeline-date">Design System</span>
+                </div>
+                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                  Designed and built the core ReactJS component library adopted across multiple business units, enforcing visual consistency, automated testing, and WCAG AA accessibility compliance across customer touchpoints.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Resume Action Bar -->
+        <div class="resume-action-bar">
+          <div>
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 4px;">Download Official Resume Documents</h4>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Available in detailed comprehensive or concise terse PDF formats.</p>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button class="btn btn-primary" id="open-resume-modal-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              Preview in Viewer
+            </button>
+            <a href="./resume-detailed.pdf" download="Vageesh_Dwivedi_Resume_Detailed.pdf" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Detailed Resume (PDF)
+            </a>
+            <a href="./resume-terse.pdf" download="Vageesh_Dwivedi_Resume_Terse.pdf" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Terse Resume (PDF)
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Purpose 3: Technical Experiments Showcase (Random Musings)
+         ====================================================================== -->
+    <section class="section" id="experiments">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 2v7.31"></path>
+              <path d="M14 9.3V2"></path>
+              <path d="M8.5 2h7"></path>
+              <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+            </svg>
+            Technical Sandbox
+          </div>
+          <h2 class="section-title">Open Technical Experiments & Lab</h2>
+          <p class="section-subtitle">
+            Hands-on prototypes, browser architecture stress-tests, and data analytics tools built to explore edge-case engineering problems.
+          </p>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div class="filter-bar">
+          <div class="filter-pills">
+            <button class="filter-pill exp-filter-pill active" data-filter="all">All Experiments (13)</button>
+            <button class="filter-pill exp-filter-pill" data-filter="flagship">Flagship Web Apps</button>
+            <button class="filter-pill exp-filter-pill" data-filter="ui">UI & Conversational UX</button>
+            <button class="filter-pill exp-filter-pill" data-filter="browser">Browser Internals & Security</button>
+            <button class="filter-pill exp-filter-pill" data-filter="perf">Performance & Data</button>
+          </div>
+
+          <div class="search-box">
+            <span class="search-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <input type="text" class="search-input" id="exp-search-input" placeholder="Search experiments by name or tech...">
+          </div>
+        </div>
+
+        <!-- Experiments Grid -->
+        <div class="experiments-grid" id="experiments-grid">
+
+          <!-- 1. Flagship: Livability Index -->
+          <div class="exp-card featured" data-category="flagship perf">
+            <div>
+              <div class="exp-top">
+                <span class="exp-flagship-badge">⭐ FEATURED FLAGSHIP</span>
+                <span class="exp-tag">Vite + React</span>
+              </div>
+              <h3 class="exp-title">Global Livability & Expat Feasibility Index</h3>
+              <p class="exp-desc">
+                An interactive visual analytics platform comparing effective tax rates, healthcare quality, safety indices, climate scores, and net purchasing power across 60+ countries for digital nomads and global professionals.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">React 18</span>
+                <span class="exp-tech-chip">Vite</span>
+                <span class="exp-tech-chip">Tailwind / Vanilla CSS</span>
+                <span class="exp-tech-chip">Data Visualization</span>
+                <span class="exp-tech-chip">Financial Modeling</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/livability-index/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Launch App
+              </a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/livability-index/" data-title="Global Livability Index">
+                Quick Preview
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Chat Widget Fluid -->
+          <div class="exp-card" data-category="ui">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Conversational UX</span>
+                <span class="exp-tech-chip">HTML5 / CSS3</span>
+              </div>
+              <h3 class="exp-title">Responsive Fluid Chat Widget</h3>
+              <p class="exp-desc">
+                Enterprise chat window interface with responsive viewports, multi-form message layouts, state transitions, and seamless third-party embedding.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">Conversational UI</span>
+                <span class="exp-tech-chip">Fluid Viewport</span>
+                <span class="exp-tech-chip">CSS Keyframes</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/chatwidget-fluid/chat.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/chatwidget-fluid/chat.html" data-title="Responsive Fluid Chat Widget">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 3. SVG Bill Estimator -->
+          <div class="exp-card" data-category="perf ui">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Data Visualization</span>
+                <span class="exp-tech-chip">SVG / Raphael.js</span>
+              </div>
+              <h3 class="exp-title">Interactive SVG Bill Estimator Graph</h3>
+              <p class="exp-desc">
+                High-performance vector graphics calculator generating dynamic bezier graph paths and calculating real-time cost projections as sliders are manipulated.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">SVG DOM</span>
+                <span class="exp-tech-chip">Raphael.js</span>
+                <span class="exp-tech-chip">Dynamic Geometry</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/graphs-billestimator/test.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/graphs-billestimator/test.html" data-title="Interactive SVG Bill Estimator">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 4. Heatmaps & Spatial Analytics -->
+          <div class="exp-card" data-category="perf">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Canvas Analytics</span>
+                <span class="exp-tech-chip">Heatmap.js</span>
+              </div>
+              <h3 class="exp-title">Dynamic Canvas Heatmap Engine</h3>
+              <p class="exp-desc">
+                Real-time 2D spatial coordinate density engine for user interaction heatmaps, clickstream visualization, and coordinate clustering.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">HTML5 Canvas</span>
+                <span class="exp-tech-chip">Spatial Density</span>
+                <span class="exp-tech-chip">Performance Tuning</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/heatmaps/index.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/heatmaps/index.html" data-title="Canvas Heatmap Engine">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 5. Finite State Machine Pattern -->
+          <div class="exp-card" data-category="ui">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Architecture Pattern</span>
+                <span class="exp-tech-chip">Vanilla JS</span>
+              </div>
+              <h3 class="exp-title">Deterministic UI State Machine</h3>
+              <p class="exp-desc">
+                Finite State Machine (FSM) implementation controlling multi-step asynchronous customer workflows, eliminating race conditions and illegal UI state transitions.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">State Machine</span>
+                <span class="exp-tech-chip">Event Bus</span>
+                <span class="exp-tech-chip">Async Transitions</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/statemachine/demopage.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/statemachine/demopage.html" data-title="UI State Machine Pattern">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 6. DOM Opener Bridge -->
+          <div class="exp-card" data-category="browser">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Browser Internals</span>
+                <span class="exp-tech-chip">Window API</span>
+              </div>
+              <h3 class="exp-title">Cross-Window DOM Opener Bridge</h3>
+              <p class="exp-desc">
+                Bidirectional synchronization between parent windows and spawned popup contexts, managing opener lifecycle events and state propagation.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">window.opener</span>
+                <span class="exp-tech-chip">Popup Lifecycle</span>
+                <span class="exp-tech-chip">DOM API</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/opener/opener.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/opener/opener.html" data-title="DOM Opener Bridge">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 7. HTML5 PostMessage Gateway -->
+          <div class="exp-card" data-category="browser">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Web Security</span>
+                <span class="exp-tech-chip">PostMessage API</span>
+              </div>
+              <h3 class="exp-title">HTML5 Cross-Domain PostMessage Gateway</h3>
+              <p class="exp-desc">
+                Hardened iframe-to-parent messaging protocol with cryptographic token validation, strict origin verification, and structured event streaming.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">PostMessage</span>
+                <span class="exp-tech-chip">Origin Checking</span>
+                <span class="exp-tech-chip">XD Proxy</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/onmessage/parent.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/onmessage/parent.html" data-title="HTML5 PostMessage Gateway">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 8. JS Memory Leak Diagnostics -->
+          <div class="exp-card" data-category="perf browser">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Performance Lab</span>
+                <span class="exp-tech-chip">V8 Profiling</span>
+              </div>
+              <h3 class="exp-title">JavaScript Memory Leak Diagnostics</h3>
+              <p class="exp-desc">
+                Interactive diagnostic harness demonstrating how unintentional closure scopes, uncleaned intervals, and detached DOM nodes bloat the V8 heap.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">Memory Profiling</span>
+                <span class="exp-tech-chip">Detached DOM</span>
+                <span class="exp-tech-chip">Closure Scopes</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/memoryleak/test1.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/memoryleak/test1.html" data-title="Memory Leak Diagnostics">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 9. Sandboxed Iframe Isolation -->
+          <div class="exp-card" data-category="browser">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Browser Security</span>
+                <span class="exp-tech-chip">Iframe Sandbox</span>
+              </div>
+              <h3 class="exp-title">Sandboxed Iframe Isolation Tests</h3>
+              <p class="exp-desc">
+                Experimental evaluation of browser sandbox attributes, CSS boundary bleed, and DOM access restriction models for third-party widgets.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">Iframe Sandbox</span>
+                <span class="exp-tech-chip">Security Policy</span>
+                <span class="exp-tech-chip">DOM Encapsulation</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/iframetest/iframe.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/iframetest/iframe.html" data-title="Iframe Sandbox Isolation">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 10. Client-Side Stream Downloader -->
+          <div class="exp-card" data-category="browser">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Browser APIs</span>
+                <span class="exp-tech-chip">Blob / Streams</span>
+              </div>
+              <h3 class="exp-title">Client-Side File Stream Downloader</h3>
+              <p class="exp-desc">
+                Instant in-browser file generation and chunked Blob streaming pipeline triggering native disk saves without server round-trip latency.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">Blob API</span>
+                <span class="exp-tech-chip">URL.createObjectURL</span>
+                <span class="exp-tech-chip">Streaming</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/filedownload/file.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/filedownload/file.html" data-title="Client File Downloader">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 11. Form Post Payload Engine -->
+          <div class="exp-card" data-category="browser">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Network & HTTP</span>
+                <span class="exp-tech-chip">Hidden Iframe</span>
+              </div>
+              <h3 class="exp-title">Hidden Iframe Form Submission Engine</h3>
+              <p class="exp-desc">
+                Architectural pattern handling cross-origin form submissions and multipart uploads without triggering full-page navigations.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">Form Target</span>
+                <span class="exp-tech-chip">Multipart / POST</span>
+                <span class="exp-tech-chip">Silent Dispatch</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/formpost/formpost.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/formpost/formpost.html" data-title="Form POST Sandbox">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 12. Dynamic Data Plot Visualization -->
+          <div class="exp-card" data-category="perf">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Visual Computing</span>
+                <span class="exp-tech-chip">HTML5 Canvas</span>
+              </div>
+              <h3 class="exp-title">Dynamic Data Plot & Particle Visualizer</h3>
+              <p class="exp-desc">
+                Hardware-accelerated canvas visualization demo animating high-frequency mathematical coordinate systems and physics particles.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">requestAnimationFrame</span>
+                <span class="exp-tech-chip">Particle Physics</span>
+                <span class="exp-tech-chip">2D Context</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/visualization/index.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/visualization/index.html" data-title="Canvas Visualization Demo">Quick Preview</button>
+            </div>
+          </div>
+
+          <!-- 13. Decision Server Engine -->
+          <div class="exp-card" data-category="ui">
+            <div>
+              <div class="exp-top">
+                <span class="exp-tag">Rules Engine</span>
+                <span class="exp-tech-chip">JSON Rule Tree</span>
+              </div>
+              <h3 class="exp-title">Rule-Based Decision Server Engine</h3>
+              <p class="exp-desc">
+                Lightweight client-side declarative rule evaluation engine that dynamically computes contextual outcomes based on multivariate conditions.
+              </p>
+              <div class="exp-techs">
+                <span class="exp-tech-chip">Decision Tree</span>
+                <span class="exp-tech-chip">Rule Parser</span>
+                <span class="exp-tech-chip">Client Logic</span>
+              </div>
+            </div>
+            <div class="exp-actions">
+              <a href="./random-musings/decisionserver/decision.html" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Launch Demo</a>
+              <button class="btn btn-sm btn-secondary preview-exp-btn" data-url="./random-musings/decisionserver/decision.html" data-title="Decision Server Engine">Quick Preview</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="exp-empty-state" style="display: none; text-align: center; padding: 48px; color: var(--text-muted);">
+          <p style="font-size: 1.1rem; margin-bottom: 8px;">No experiments found matching your filter criteria.</p>
+          <button class="btn btn-sm btn-secondary" onclick="document.getElementById('exp-search-input').value=''; document.querySelector('.exp-filter-pill[data-filter=\'all\']').click();">
+            Reset Filters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Purpose 4: Articles & Blogs (Hosted LinkedIn Articles + Seamless Native Ads)
+         ====================================================================== -->
+    <section class="section" id="articles">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            Hosted Articles & Insights
+          </div>
+          <h2 class="section-title">Published Essays & Architectural Blueprints</h2>
+          <p class="section-subtitle">
+            Field notes and published articles by Vageesh on engineering leadership, high-performing pod execution, talent evaluation, multi-agent GenAI, and cloud systems.
+          </p>
+        </div>
+
+        <!-- Article Filter Pills -->
+        <div class="filter-bar">
+          <div class="filter-pills">
+            <button class="filter-pill article-filter-pill active" data-filter="all">All Articles (14)</button>
+            <button class="filter-pill article-filter-pill" data-filter="leadership">Leadership & Teams</button>
+            <button class="filter-pill article-filter-pill" data-filter="agile">Agile & Process</button>
+            <button class="filter-pill article-filter-pill" data-filter="ai">AI & Systems</button>
+            <button class="filter-pill article-filter-pill" data-filter="cloud">Cloud & Infra</button>
+            <button class="filter-pill article-filter-pill" data-filter="sponsored">Curated Picks</button>
+          </div>
+        </div>
+
+        <!-- Articles Grid (Editorial Articles with Seamless Native Sponsored Content) -->
+        <div class="articles-grid" id="articles-grid">
+
+          <!-- 1. Taking Over Engineering Team (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="leadership" data-article-id="article-taking-over-team">
+            <div class="article-meta-row">
+              <span class="article-category">Leadership Meetup</span>
+              <div class="article-meta-right">
+                <span class="article-date">Jul 18, 2018</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  8 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Taking Over a New Engineering Team or Organization</h3>
+            <p class="article-excerpt">
+              The executive transition playbook: balancing depth vs. breadth, the Trust Equation T=(C+R+I)/S, avoiding the organ rejection trap, and the 30-60-90 day blueprint.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 2. Fragmented-Dependent Scrum (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="agile leadership" data-article-id="article-fragmented-scrum">
+            <div class="article-meta-row">
+              <span class="article-category">Agile & Pods</span>
+              <div class="article-meta-right">
+                <span class="article-date">Jul 2, 2022</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">"Fragmented-Dependent" Scrum Execution Model</h3>
+            <p class="article-excerpt">
+              Scaling agile delivery across 20+ engineers: dedicated 3-5 person pods, pre-grooming rituals, slotted sprint planning, and the monthly rotating support baton.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 3. SEAMLESS NATIVE AD / HIGH-YIELD SPONSORED CARD: RunPod vLLM GPU Cloud -->
+          <article class="article-card native-sponsored" data-category="cloud ai sponsored" data-article-id="article-runpod-vllm">
+            <div class="article-meta-row">
+              <span class="article-category sponsored-label">Infrastructure Pick</span>
+              <div class="article-meta-right">
+                <span class="article-date">Sep 2026</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Benchmarking GPU Inference Latencies: Why We Migrated Our vLLM Clusters to RunPod Serverless</h3>
+            <p class="article-excerpt">
+              Evaluating cold-start times, tokens-per-second, and NVLink interconnects across major cloud GPU providers. Includes architectural playbook and $25 credit setup.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta" style="color: var(--accent-cyan);">Read Spotlight →</span>
+            </div>
+          </article>
+
+          <!-- 4. How Do You Know If an Employee Is A, B, or C Player (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="leadership" data-article-id="article-abc-players">
+            <div class="article-meta-row">
+              <span class="article-category">Talent Evaluation</span>
+              <div class="article-meta-right">
+                <span class="article-date">Sep 13, 2023</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  4 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">How Do You Know If an Employee Is an A, B, or C Player?</h3>
+            <p class="article-excerpt">
+              A leader's 4-part assessment framework: what happens when you delegate, what happens when recruiting, how they tackle new tech, and how they handle blockers.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 5. SEAMLESS NATIVE AD / HIGH-YIELD SPONSORED CARD: Neon Serverless Postgres Vector -->
+          <article class="article-card native-sponsored" data-category="cloud ai sponsored" data-article-id="article-neon-postgres">
+            <div class="article-meta-row">
+              <span class="article-category sponsored-label">Data Architecture</span>
+              <div class="article-meta-right">
+                <span class="article-date">Aug 2026</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  6 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">The Modern Data Stack for LLM Memory: Why Serverless Postgres Beats Dedicated Vector Databases</h3>
+            <p class="article-excerpt">
+              Why running pgvector inside autoscaling serverless PostgreSQL eliminates synchronization lag and provides enterprise ACID guarantees with zero management overhead.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta" style="color: var(--accent-cyan);">Read Spotlight →</span>
+            </div>
+          </article>
+
+          <!-- 6. Building Distributed Teams (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="leadership" data-article-id="article-building-distributed">
+            <div class="article-meta-row">
+              <span class="article-category">Remote Culture</span>
+              <div class="article-meta-right">
+                <span class="article-date">Jun 8, 2018</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  6 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Building Distributed Engineering Teams Across Geographies</h3>
+            <p class="article-excerpt">
+              Field notes from the Instacart SF leadership meetup: remote culture budgeting, the 4x annual in-person rule, showing emotion over video, and radical context transparency.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 7. Building Trust Within Team (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="leadership" data-article-id="article-building-trust">
+            <div class="article-meta-row">
+              <span class="article-category">Team Dynamics</span>
+              <div class="article-meta-right">
+                <span class="article-date">Mar 20, 2018</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Building Trust Within Your Engineering Team</h3>
+            <p class="article-excerpt">
+              Lessons from Navy SEAL David Silverman and VP Eng James Birchler: benevolence vs. competence trust, repairing broken trust, and why managers must relinquish surveillance.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 8. SEAMLESS NATIVE AD / HIGH-YIELD SPONSORED CARD: Langfuse LLM Observability -->
+          <article class="article-card native-sponsored" data-category="ai sponsored" data-article-id="article-langfuse-mlops">
+            <div class="article-meta-row">
+              <span class="article-category sponsored-label">MLOps Tooling</span>
+              <div class="article-meta-right">
+                <span class="article-date">Jun 2026</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Production LLM Observability: Debugging Hallucinations and Token Leaks with Langfuse</h3>
+            <p class="article-excerpt">
+              Practical architecture for capturing complete inference trace spans, user feedback loops, and token cost attribution across multi-model GenAI platforms.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta" style="color: var(--accent-cyan);">Read Spotlight →</span>
+            </div>
+          </article>
+
+          <!-- 9. One on One 101 (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="leadership" data-article-id="article-one-on-one">
+            <div class="article-meta-row">
+              <span class="article-category">Career Mentorship</span>
+              <div class="article-meta-right">
+                <span class="article-date">Apr 5, 2024</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  3 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">One-on-One 101: Bringing Problems with a Point of View</h3>
+            <p class="article-excerpt">
+              Why bringing raw complaints damages your credibility, and how coming into your manager 1-on-1 with an articulated hypothesis transforms you into a strategic partner.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 10. Engineering Competency Matrix (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="leadership" data-article-id="article-competency-matrix">
+            <div class="article-meta-row">
+              <span class="article-category">Career Ladder</span>
+              <div class="article-meta-right">
+                <span class="article-date">Apr 4, 2022</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  6 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Engineering Competency Matrix: L1 to L4 Growth Framework</h3>
+            <p class="article-excerpt">
+              A transparent organizational rubric evaluating engineers across Continuous Learning, Execution Discipline, Cross-functional Influence, and Proactive Initiative.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 11. Recognition vs Incentives (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="leadership" data-article-id="article-recognition-incentives">
+            <div class="article-meta-row">
+              <span class="article-category">Culture & Teams</span>
+              <div class="article-meta-right">
+                <span class="article-date">Jun 8, 2021</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  4 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Recognition vs. Incentives in High-Performing Engineering Teams</h3>
+            <p class="article-excerpt">
+              The crucial psychological divide: psychic belonging vs. monetary rewards, spontaneous peer recognition vs. cyclic targets, and sustaining intrinsic motivation.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 12. Getting Started as a Full Stack Engineer (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="agile" data-article-id="article-getting-started">
+            <div class="article-meta-row">
+              <span class="article-category">Tech Syllabus</span>
+              <div class="article-meta-right">
+                <span class="article-date">Apr 16, 2021</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  5 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Getting Started as a Full Stack Engineer: Foundations & Beyond</h3>
+            <p class="article-excerpt">
+              Looking beyond fleeting framework churn: Donald Knuth algorithms, Robert Martin Clean Code, event loop mechanics, browser rendering trees, and API design.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 13. Insinuation Anxiety (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="leadership" data-article-id="article-insinuation-anxiety">
+            <div class="article-meta-row">
+              <span class="article-category">Behavioral Psychology</span>
+              <div class="article-meta-right">
+                <span class="article-date">Sep 25, 2026</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  6 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Insinuation Anxiety: Why the Fear of Signaling Distrust Drives Destructive Compliance</h3>
+            <p class="article-excerpt">
+              The psychology of preference falsification, the financial advisor disclosure paradox, why women experience higher anxiety, and how engineering leaders institutionalize verification.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+          <!-- 14. Compliance and Defiance (HOSTED LINKEDIN ARTICLE) -->
+          <article class="article-card" data-category="leadership" data-article-id="article-compliance-defiance">
+            <div class="article-meta-row">
+              <span class="article-category">Ethics & Systems</span>
+              <div class="article-meta-right">
+                <span class="article-date">Sep 25, 2026</span>
+                <span class="meta-separator">•</span>
+                <span class="article-read-time">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  8 min read
+                </span>
+              </div>
+            </div>
+            <h3 class="article-title">Compliance, Defiance, and the Illusion of Agency: Where Is the Line Drawn?</h3>
+            <p class="article-excerpt">
+              Authority bias, the 2004 McDonald's hoax, and the weaponized "C-Suite Proxy": how title-dropping silences data, why junior engineers unwittingly agree to harmful tasks, and practicing intelligent defiance.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <img src="./profile.jpg" alt="Vageesh" class="article-author-img">
+                <span>Vageesh Dwivedi</span>
+              </div>
+              <span class="article-cta">Read Essay →</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Vageesh Dwivedi</h3>
+          <p>
+            AI & ML Engineering Leader & Systems Architect with 20+ years building enterprise systems, agentic workflows, and cloud-native platforms.
+          </p>
+          <div style="margin-top: 18px; display: flex; gap: 10px;">
+            <a href="https://github.com/vagdwd" target="_blank" rel="noopener" class="social-pill" aria-label="GitHub Profile">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/vageesh-dwivedi/" target="_blank" rel="noopener" class="social-pill" aria-label="LinkedIn Profile">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">Career Profile & Resume</a></li>
+            <li><a href="#experiments">Technical Experiments Lab</a></li>
+            <li><a href="#articles">Articles & System Design</a></li>
+            <li><a href="#scheduler">Book a Consultation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact & Advisory</h4>
+          <ul class="footer-nav-list">
+            <li><a href="mailto:vageesh.dwivedi@gmail.com">vageesh.dwivedi@gmail.com</a></li>
+            <li><span>Phone: +1-(408) 679-6025</span></li>
+            <li><span>Location: Silicon Valley / Bay Area, CA</span></li>
+            <li><a href="./resume-detailed.pdf" target="_blank">Download Resume PDF</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Vageesh Dwivedi. All rights reserved.</div>
+        <div style="display: flex; gap: 16px;">
+          <span>Designed with Vanilla HTML & CSS</span>
+          <span>Hosted on GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Modal 1: Resume PDF Viewer Modal
+       ======================================================================== -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-container" style="max-width: 1000px;">
+      <div class="modal-header">
+        <div class="modal-title" id="resume-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Vageesh Dwivedi — Executive Resume</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <a href="./resume-detailed.pdf" download="Vageesh_Dwivedi_Resume_Detailed.pdf" class="btn btn-sm btn-primary">
+            Download PDF
+          </a>
+          <button class="modal-close-btn" aria-label="Close modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body" style="padding: 0;">
+        <iframe src="./resume-detailed.pdf#toolbar=1" class="modal-pdf-iframe" title="Vageesh Dwivedi Resume PDF Viewer"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Modal 2: Experiment Live Sandbox Modal
+       ======================================================================== -->
+  <div class="modal-backdrop" id="sandbox-modal" role="dialog" aria-modal="true" aria-labelledby="sandbox-title">
+    <div class="modal-container" style="max-width: 1180px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span id="sandbox-title">Interactive Experiment Sandbox</span>
+        </div>
+        
+        <div class="sandbox-device-bar">
+          <button class="device-btn active" data-device="desktop">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            Desktop
+          </button>
+          <button class="device-btn" data-device="tablet">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            Tablet
+          </button>
+          <button class="device-btn" data-device="mobile">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            Mobile
+          </button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <a href="#" target="_blank" rel="noopener" id="sandbox-external-link" class="btn btn-sm btn-secondary" title="Open in new tab">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            New Tab
+          </a>
+          <button class="modal-close-btn" aria-label="Close modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body" style="padding: 16px; display: flex; justify-content: center; background: #07090e;">
+        <div id="sandbox-frame-holder" class="sandbox-frame-holder" style="width: 100%;">
+          <iframe id="sandbox-iframe" class="sandbox-iframe" src="about:blank" title="Sandbox Live Frame"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Modal 3: Article Reader Modal
+       ======================================================================== -->
+  <div class="modal-backdrop" id="article-modal" role="dialog" aria-modal="true" aria-labelledby="article-reader-title">
+    <div class="modal-container" style="max-width: 820px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          <span>Article & Field Notes Reader</span>
+        </div>
+        <button class="modal-close-btn" aria-label="Close reader">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="article-reader-content">
+          <div class="article-reader-header">
+            <div id="article-reader-meta" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-primary); margin-bottom: 8px;"></div>
+            <h2 id="article-reader-title" class="article-reader-title"></h2>
+          </div>
+          <div id="article-reader-body" class="article-reader-prose"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Core Scripts -->
+  <script src="./script.js"></script>
+</body>
 </html>

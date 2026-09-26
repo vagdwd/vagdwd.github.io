@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started as a Full Stack Engineer | Vageesh Dwivedi</title>
+  <meta name="description" content="A curated roadmap for building production-grade software: software development fundamentals, Donald Knuth algorithms, Clean Code, and web architectures.">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-brand">
+        <img src="../profile.jpg" alt="Vageesh Dwivedi" class="nav-avatar">
+        <span>Vageesh Dwivedi</span>
+      </a>
+      <div class="nav-actions">
+        <a href="../index.html#articles" class="btn btn-sm btn-secondary">← Back to Articles</a>
+        <a href="../index.html#scheduler" class="btn btn-sm btn-primary">Schedule Call</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--nav-height) + 40px); padding-bottom: 80px;">
+    <div class="container" style="max-width: 800px;">
+      <div style="margin-bottom: 32px;">
+        <span class="section-tag">Engineering Foundations & Syllabus</span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; line-height: 1.2; margin-block: 14px 16px;">
+          Getting Started as a Full Stack Engineer
+        </h1>
+        <div style="display: flex; align-items: center; gap: 14px; color: var(--text-muted); font-size: 0.9rem;">
+          <img src="../profile.jpg" alt="Vageesh Dwivedi" style="width: 32px; height: 32px; border-radius: 50%;">
+          <span>Vageesh Dwivedi</span>
+          <span>•</span>
+          <span>April 16, 2021</span>
+          <span>•</span>
+          <span>5 min read</span>
+        </div>
+      </div>
+
+      <article class="article-reader-prose" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+        <p>Becoming an effective full stack engineer requires looking beyond fleeting framework trends to master core computer science and software design principles.</p>
+
+        <h3>1. Software Development Fundamentals</h3>
+        <ul>
+          <li><strong>Writing Clean Code:</strong> Emphasize readability, modularity, and maintainability. Study Robert Martin’s <em>Clean Code</em> and Steve McConnell's <em>Code Complete</em>.</li>
+          <li><strong>Algorithms & Computational Complexity:</strong> Deep-dive into data structures, memory allocation, and algorithmic analysis. Explore Donald Knuth's legendary <em>Computer Musings</em> lectures.</li>
+        </ul>
+
+        <h3>2. JavaScript & Browser Internals</h3>
+        <p>Before jumping into React or Vue, understand the execution environment:</p>
+        <ul>
+          <li>The Event Loop, microtasks, and task queues.</li>
+          <li>Prototypal inheritance and closure scope mechanics.</li>
+          <li>DOM tree construction, layout thrashing, and critical rendering path.</li>
+          <li>Cross-browser compatibility quirks, memory profiling in Chrome DevTools, and avoiding detached DOM node traps.</li>
+        </ul>
+
+        <h3>3. Web Architecture & State Management</h3>
+        <ul>
+          <li><strong>Component Architecture:</strong> Separation of UI presentation from business logic and data ingestion via custom hooks and reactive state.</li>
+          <li><strong>Testing Pyramid:</strong> Isolated unit tests with Jest, integration test boundaries, and resilient end-to-end automation.</li>
+          <li><strong>Node.js & Backend Services:</strong> Non-blocking I/O, streaming API payloads, database connection pooling, and secure token handshakes (OAuth2 / JWT).</li>
+        </ul>
+      </article>
+
+      <div style="border-top: 1px solid var(--border-subtle); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="https://www.linkedin.com/in/vageesh-dwivedi/" target="_blank" rel="noopener" class="btn btn-secondary">
+          Connect with Vageesh on LinkedIn ↗
+        </a>
+        <a href="../index.html#scheduler" class="btn btn-primary">
+          Schedule Advisory Session
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

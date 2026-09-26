@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"Fragmented-Dependent" Scrum Execution Model | Vageesh Dwivedi</title>
+  <meta name="description" content="How to scale agile engineering with pod structures, pre-grooming rituals, slotted sprint planning, and rotating monthly support batons.">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-brand">
+        <img src="../profile.jpg" alt="Vageesh Dwivedi" class="nav-avatar">
+        <span>Vageesh Dwivedi</span>
+      </a>
+      <div class="nav-actions">
+        <a href="../index.html#articles" class="btn btn-sm btn-secondary">← Back to Articles</a>
+        <a href="../index.html#scheduler" class="btn btn-sm btn-primary">Schedule Call</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--nav-height) + 40px); padding-bottom: 80px;">
+    <div class="container" style="max-width: 800px;">
+      <div style="margin-bottom: 32px;">
+        <span class="section-tag">Agile & Engineering Process</span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; line-height: 1.2; margin-block: 14px 16px;">
+          "Fragmented-Dependent" Scrum Execution Model
+        </h1>
+        <div style="display: flex; align-items: center; gap: 14px; color: var(--text-muted); font-size: 0.9rem;">
+          <img src="../profile.jpg" alt="Vageesh Dwivedi" style="width: 32px; height: 32px; border-radius: 50%;">
+          <span>Vageesh Dwivedi</span>
+          <span>•</span>
+          <span>July 2, 2022</span>
+          <span>•</span>
+          <span>5 min read</span>
+        </div>
+      </div>
+
+      <article class="article-reader-prose" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+        <p>Though we began optimizing our scrum teams into this model in July 2020, by early 2021 we realized we had evolved an execution framework closely aligned with the LeSS (Large-Scale Scrum) principles, adapted specifically for high-velocity enterprise platforms with cross-geo dependencies.</p>
+
+        <h3>Pod Structure</h3>
+        <p>Instead of a single amorphous 20-person team where ceremonies take hours and context is scattered, we structured engineering into focused <strong>Pods</strong>:</p>
+        <ul>
+          <li><strong>Pod Lead:</strong> Ideally a Principal MTS, Tech Lead, or high-potential Senior MTS.</li>
+          <li><strong>Pod Size:</strong> 3 to 5 engineers dedicated to coherent product focus areas.</li>
+          <li><strong>Bandwidth-Based Delivery:</strong> If an Epic is estimated at 48 story points, a 3-engineer pod focuses on and delivers the complete feature over a 2-month horizon rather than fragmenting context across sprints.</li>
+        </ul>
+
+        <h3>Workflow & Ceremony Innovations</h3>
+        <p>To eliminate meeting fatigue and increase estimation accuracy, we re-architected the traditional Scrum cadence:</p>
+        
+        <p><strong>1. Pre-Grooming Meeting:</strong> A weekly 30-minute sync between Product Owner, Engineering Owner, Scrum Master, and Pod Leads. The PO articulates user value, while Engineering Owners outline technical debt and architectural requirements before stories reach developers.</p>
+        
+        <p><strong>2. Engineering Brainstorming Meeting:</strong> Weekly technical whiteboarding session moderated by an engineering peer (not the manager) to collaboratively break down architecture, identify API interfaces, and create Jira action items.</p>
+
+        <p><strong>3. Slotted Sprint Planning:</strong> Each pod joins planning in designated 15-to-20 minute slots rather than forcing the entire 20-person organization to sit through every unrelated item. Planning velocity improved by 300%.</p>
+
+        <p><strong>4. The Rotating Support Baton:</strong> Production and E2E issue firefighting can paralyze feature velocity if distributed randomly. We introduced a rotating monthly "Support Pod" role. During their active month, this pod absorbs all production defects, patch releases, and SRE coordination. Other pods maintain 100% uninterrupted flow on feature milestones.</p>
+
+        <h3>Long-Term Cultural Effects</h3>
+        <ul>
+          <li><strong>True End-to-End Ownership:</strong> Engineers become accountable for the full customer journey rather than cherry-picking isolated tasks.</li>
+          <li><strong>Asynchronous Standups:</strong> As maturity increases, synchronous status meetings are replaced with asynchronous channel check-ins.</li>
+          <li><strong>Manager as Capability Enhancer:</strong> The engineering director steps away from task allocation and transitions into a force multiplier, optimizing policies, unblocking cross-team friction, and coaching talent.</li>
+        </ul>
+      </article>
+
+      <div style="border-top: 1px solid var(--border-subtle); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="https://www.linkedin.com/in/vageesh-dwivedi/" target="_blank" rel="noopener" class="btn btn-secondary">
+          Connect with Vageesh on LinkedIn ↗
+        </a>
+        <a href="../index.html#scheduler" class="btn btn-primary">
+          Schedule Process Advisory
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
