@@ -128,18 +128,28 @@ function initNavigation() {
    3. Resume Tab Switcher
    ========================================================================== */
 function initResumeTabs() {
-  const tabButtons = document.querySelectorAll('.resume-tab-btn');
-  const tabPanes = document.querySelectorAll('.resume-tab-pane');
+  setupTabGroup('.resume-tab-btn', '.resume-tab-pane', 'data-tab', 'tab-');
+  setupTabGroup('.dossier-tab-btn', '.dossier-tab-pane', 'data-tab', 'dossier-tab-');
+}
+
+function setupTabGroup(btnSelector, paneSelector, dataAttr, idPrefix) {
+  const tabButtons = document.querySelectorAll(btnSelector);
+  const tabPanes = document.querySelectorAll(paneSelector);
 
   tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetTab = btn.getAttribute('data-tab');
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetTab = btn.getAttribute(dataAttr);
 
-      tabButtons.forEach(b => b.classList.remove('active'));
+      tabButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       tabPanes.forEach(p => p.classList.remove('active'));
 
       btn.classList.add('active');
-      const targetPane = document.getElementById(`tab-${targetTab}`);
+      btn.setAttribute('aria-selected', 'true');
+      const targetPane = document.getElementById(`${idPrefix}${targetTab}`);
       if (targetPane) {
         targetPane.classList.add('active');
       }
@@ -1071,9 +1081,30 @@ function initModals() {
     });
   });
 
-  document.querySelectorAll('.modal-close-btn, .modal-backdrop').forEach(el => {
-    el.addEventListener('click', (e) => {
-      if (e.target === el) {
+  // Close buttons: click anywhere on button or its SVG children
+  document.querySelectorAll('.modal-close-btn, [data-close-modal]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      if (!href || href === '#' || href === 'javascript:void(0)') {
+        e.preventDefault();
+      }
+      e.stopPropagation();
+      closeAllModals();
+      if (href && href.startsWith('#') && href !== '#') {
+        const targetEl = document.querySelector(href);
+        if (targetEl) {
+          setTimeout(() => {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }, 80);
+        }
+      }
+    });
+  });
+
+  // Backdrop clicks: click outside modal container
+  document.querySelectorAll('.modal-backdrop').forEach(bd => {
+    bd.addEventListener('click', (e) => {
+      if (e.target === bd) {
         closeAllModals();
       }
     });

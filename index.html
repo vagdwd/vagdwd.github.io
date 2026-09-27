@@ -150,16 +150,17 @@
                   <line x1="16" y1="17" x2="8" y2="17"></line>
                   <polyline points="10 9 9 9 8 9"></polyline>
                 </svg>
-                View Resume
+                Executive Dossier
               </a>
 
-              <button class="btn btn-lg btn-secondary" data-copy="vageesh.dwivedi@gmail.com" title="Click to copy email">
+              <a href="#experiments" class="btn btn-lg btn-secondary">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
                 </svg>
-                Copy Email
-              </button>
+                Technical Lab
+              </a>
             </div>
 
             <div class="hero-socials">
@@ -175,14 +176,6 @@
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
                 <span>LinkedIn @vageesh-dwivedi</span>
-              </a>
-
-              <a href="mailto:vageesh.dwivedi@gmail.com" class="social-pill">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
-                </svg>
-                <span>Email Vageesh</span>
               </a>
             </div>
           </div>
@@ -312,11 +305,10 @@
                 <span>Timezone: US Pacific (PST/PDT) — Flexible across international timezones</span>
               </div>
               <div class="scheduler-meta-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
-                <span>Direct Contact: <a href="mailto:vageesh.dwivedi@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">vageesh.dwivedi@gmail.com</a></span>
+                <span>Direct Inquiries: <a href="https://www.linkedin.com/in/vageesh-dwivedi/" target="_blank" rel="noopener" style="color: var(--accent-primary); text-decoration: underline;">LinkedIn Message</a></span>
               </div>
             </div>
           </div>
@@ -377,16 +369,39 @@
           </p>
         </div>
 
+        <!-- Executive Summary Callout (Verbatim from Resume) -->
+        <div class="executive-summary-box">
+          <div class="executive-summary-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            Executive Summary
+          </div>
+          <p class="executive-summary-text">
+            Visionary engineering leader with 20+ years of experience building and scaling high-performance, enterprise-grade AI Operations (AIOps) and data platforms. Proven track record in leading global teams to develop intelligent systems that process high-volume data streams, reduce operational noise, and deliver actionable insights. Expertise in building cloud-native infrastructure on Kubernetes, driving MLOps best practices, and delivering significant improvements in operational efficiency and cost. Strong expertise in LLM-powered solutions, RAG-based Q&A systems, and Virtual Assistant platforms. Adept at leading cross-functional teams to deliver high-impact AI solutions at scale.
+          </p>
+        </div>
+
         <!-- Resume Tabs Navigation -->
         <div class="resume-tabs-nav" role="tablist">
           <button class="resume-tab-btn active" data-tab="experience" role="tab" aria-selected="true">
             Work Experience
           </button>
           <button class="resume-tab-btn" data-tab="skills" role="tab" aria-selected="false">
-            Core Competencies
+            Core Skills
           </button>
           <button class="resume-tab-btn" data-tab="projects" role="tab" aria-selected="false">
-            Key Architectural Achievements
+            Notable Projects
+          </button>
+          <button class="resume-tab-btn" data-tab="patents" role="tab" aria-selected="false">
+            Patents & IP
+          </button>
+          <button class="resume-tab-btn" data-tab="education" role="tab" aria-selected="false">
+            Education
           </button>
         </div>
 
@@ -406,13 +421,13 @@
                 <div class="timeline-header">
                   <div>
                     <h3 class="timeline-role">Director, Engineering</h3>
-                    <div class="timeline-company">Movius Interactive Corp • Fremont, CA</div>
+                    <div class="timeline-company">Movius Interactive Corp</div>
                   </div>
-                  <span class="timeline-date">May 2025 – Present</span>
+                  <span class="timeline-date">2025 – Present</span>
                 </div>
                 <ul class="timeline-bullets">
-                  <li>Leading a 10-person global engineering team building and scaling Partner Integrations using secure Messaging APIs across Salesforce, Dynamics 365, Zoom, and MS Teams.</li>
-                  <li>Created and executing org-wide AI adoption strategy: vendor selection, security/risk governance, team coaching, token consumption optimization, and quota management through observational telemetry.</li>
+                  <li>Leading a 10-person global engineering team building and scaling Partner Integrations using Messaging APIs. Secure messaging and calling on Salesforce, Dynamics 365, Zoom, and MS Teams.</li>
+                  <li>Created and currently executing the org-wide AI adoption strategy. From vendor selection, security and risk assessment, evangelism, adoption, to setting goals for outcomes. Optimizing token consumption and managing quotas through training, coaching, and observational usage analysis.</li>
                 </ul>
               </div>
             </div>
@@ -430,17 +445,18 @@
                 <div class="timeline-header">
                   <div>
                     <h3 class="timeline-role">Director Software Development</h3>
-                    <div class="timeline-company">247.ai Inc • Campbell, CA</div>
+                    <div class="timeline-company">247.ai Inc</div>
                   </div>
-                  <span class="timeline-date">Nov 2015 – Jan 2025</span>
+                  <span class="timeline-date">2015 – 2025</span>
                 </div>
                 <ul class="timeline-bullets">
-                  <li>Led a 24-engineer global organization across three geographies building enterprise-scale AI-powered Conversational AI SaaS serving millions of users across digital and voice channels.</li>
-                  <li>Pioneered AI/ML initiatives implementing RAG-based Q&A systems and Microsoft AutoGen-powered agentic flows, reducing agent onboarding time by 30% and average handling time (AHT) by 10%.</li>
-                  <li>Reduced cloud infrastructure costs by 40% through a strategic containerization initiative, migrating legacy VMs to Docker Swarm and Kubernetes with declarative CI/CD pipelines.</li>
-                  <li>Revolutionized virtual assistant development by delivering a designer-focused low-code platform, reducing dev effort by 75% and accelerating release cycles by 60–80%.</li>
-                  <li>Partnered with Apple (Messages for Business), Google (Business Messages), and Twilio to build an enterprise omnichannel messaging platform, driving a 60% operational cost drop for Fortune 500 retailers.</li>
-                  <li>Architected cross-platform React Native and React.js SDKs, cutting customer integration launch timelines by 70%.</li>
+                  <li>Led a 24-engineer global team (in three geographies) developing enterprise-scale AI-powered Conversational AI solutions, managing end-to-end product lifecycle, including feature planning, technical design, and security compliance for a SaaS suite serving millions of users across digital and voice channels.</li>
+                  <li>Pioneered AI/ML initiatives implementing RAG-based Q&A systems and Microsoft AutoGen-powered agentic flows, optimizing contact center operations through an intelligent agent copilot and automated training platform for seamless bot-human orchestration, reducing onboarding time by 30% and AHT by 10%.</li>
+                  <li>Reduced cloud infrastructure costs by 40% through a strategic containerization initiative, migrating legacy applications to Kubernetes while implementing robust CI/CD pipelines and security frameworks across environments.</li>
+                  <li>Revolutionized virtual assistant development by implementing a low-code, designer-focused self-service tool, reducing development effort by 75% and accelerating deployment time by 60–80% across various complexity levels.</li>
+                  <li>Drove digital transformation for major enterprises, achieving 60% cost reduction in customer support through migration from legacy IVR to digital chat platforms while maintaining 70% customer satisfaction SLA, partnering with industry leaders like Apple, Google, and Twilio for enterprise messaging solutions.</li>
+                  <li>Developed a React Native-based SDK for iOS/Android chat integrations and a Web SDK using React.js to reduce launch time for customers by 70%.</li>
+                  <li>Spearheaded an enterprise ReactJS-based reusable component library and design system, reducing UI development efforts across teams.</li>
                 </ul>
               </div>
             </div>
@@ -457,14 +473,17 @@
                 <div class="timeline-header">
                   <div>
                     <h3 class="timeline-role">Manager Software Development</h3>
-                    <div class="timeline-company">247.ai Inc • Bengaluru, India</div>
+                    <div class="timeline-company">247.ai Inc</div>
                   </div>
-                  <span class="timeline-date">Dec 2010 – Nov 2015</span>
+                  <span class="timeline-date">2010 – 2015</span>
                 </div>
                 <ul class="timeline-bullets">
-                  <li>Built and led a high-performing engineering team from scratch, establishing Agile release cycles and product feedback loops.</li>
-                  <li>Spearheaded transition of core frontend frameworks from legacy Prototype.js to high-speed native JavaScript implementations.</li>
-                  <li>Engineered cross-browser enterprise solutions ensuring rock-solid compatibility across IE7/8 and early mobile operating systems.</li>
+                  <li>Spearheaded the transition and ownership of two critical frontend frameworks at 247.ai, combining hands-on development with strategic optimization across global teams.</li>
+                  <li>Built and led a high-performing engineering team from scratch, overseeing the full product lifecycle from feasibility analysis to feature rollout.</li>
+                  <li>Established agile development processes with regular release cycles and feedback loops, ensuring production stability while rapidly advancing from IC to leadership.</li>
+                  <li>Evolved JavaScript expertise from Prototype.js and Scriptaculous to native implementations, advocating for framework-independent solutions.</li>
+                  <li>Specialized in cross-browser compatibility, delivering robust solutions for enterprise applications on IE7/8 and legacy mobile OS.</li>
+                  <li>Launched and led a successful internship program, mentoring junior developers into high-impact engineers.</li>
                 </ul>
               </div>
             </div>
@@ -480,36 +499,62 @@
                 <div class="timeline-header">
                   <div>
                     <h3 class="timeline-role">Technology Lead</h3>
-                    <div class="timeline-company">Infosys • Bengaluru, India</div>
+                    <div class="timeline-company">Infosys</div>
                   </div>
-                  <span class="timeline-date">May 2008 – Dec 2010</span>
+                  <span class="timeline-date">2008 – 2010</span>
                 </div>
                 <ul class="timeline-bullets">
-                  <li>Led QA engineering and automation for Yahoo! advertising contracts and guaranteed delivery ad systems using Shell and Perl automation.</li>
-                  <li>Developed high-throughput ad tracking and logging modules using C/C++, Apache server modules, and Linux socket utilities.</li>
+                  <li>Led QA engineering operations for a tier-1 digital advertising contracts and guaranteed delivery system, ensuring guaranteed ad delivery through rigorous testing and automation.</li>
+                  <li>Designed and implemented diverse testing methodologies—Continuous Operation, Stability, Network Latency, Deployment, Code Coverage, Memory Leak, and End-to-End Integration—leveraging Shell and Perl scripting for automation.</li>
+                  <li>Developed a high-performance ad tracking platform, building full-stack solutions with Apache server applications and custom C/C++ Apache modules.</li>
+                  <li>Engineered a robust logging infrastructure using log4cpp and Boost on Linux, enabling comprehensive ad performance monitoring across tier-1 digital publishing and partner networks.</li>
                 </ul>
               </div>
             </div>
 
-            <!-- Education -->
+            <!-- IBM -->
             <div class="timeline-item">
               <div class="timeline-marker">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
                 </svg>
               </div>
               <div class="timeline-content">
                 <div class="timeline-header">
                   <div>
-                    <h3 class="timeline-role">Bachelor of Technology (B.Tech) — Electrical & Electronics</h3>
-                    <div class="timeline-company">National Institute of Technology (NIT), Tiruchirappalli, India</div>
+                    <h3 class="timeline-role">Application Developer</h3>
+                    <div class="timeline-company">IBM</div>
                   </div>
-                  <span class="timeline-date">Class of 2004</span>
+                  <span class="timeline-date">2005 – 2008</span>
                 </div>
-                <p style="font-size: 0.925rem; color: var(--text-secondary); margin-top: 6px;">
-                  Comprehensive foundation in computer engineering, digital circuits, control systems, and computational algorithms.
-                </p>
+                <ul class="timeline-bullets">
+                  <li>Delivered mission-critical Order Management, Reporting, and Invoicing systems for high-throughput financial feeds data for a leading global financial media client, utilizing OpenVMS, Pro*C, and Unix shell scripting.</li>
+                  <li>This role helped me build effective client communication, negotiation skills, understanding of onshore-offshore orchestration, technical analysis, design strategy, software development, and estimation.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Cognizant -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 12h8"></path>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Programmer Analyst</h3>
+                    <div class="timeline-company">Cognizant</div>
+                  </div>
+                  <span class="timeline-date">2004 – 2005</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Built test tools for products in the auction industry using XML, XSLT, Perl, and automation testing frameworks.</li>
+                </ul>
               </div>
             </div>
 
@@ -524,158 +569,400 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-primary);">
                   <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7.003 7.003 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7.003 7.003 0 0 1 11 5.07V5a1 1 0 0 1 2 0v.07A7.003 7.003 0 0 1 18.93 11H19a1 1 0 0 1 0 2h-.07A7.003 7.003 0 0 1 13 16.93z"></path>
                 </svg>
-                AI & Machine Learning
+                AI / ML & Generative AI
               </div>
               <div class="skill-tags-cloud">
                 <span class="skill-chip">Microsoft AutoGen</span>
-                <span class="skill-chip">Multi-Agent Systems</span>
-                <span class="skill-chip">RAG Pipelines</span>
+                <span class="skill-chip">Multi-Agent Orchestration</span>
+                <span class="skill-chip">RAG-based Q&A Systems</span>
                 <span class="skill-chip">LangChain & LlamaIndex</span>
-                <span class="skill-chip">vLLM & LiteLLM</span>
+                <span class="skill-chip">vLLM & LiteLLM Inference</span>
                 <span class="skill-chip">Promptfoo & Langfuse</span>
-                <span class="skill-chip">Vector Search (pgvector)</span>
-                <span class="skill-chip">Intent Classification</span>
-                <span class="skill-chip">Embedding Models</span>
+                <span class="skill-chip">Vector Search & Embeddings</span>
+                <span class="skill-chip">Token & Quota Optimization</span>
               </div>
             </div>
 
             <div class="skill-category-card">
               <div class="skill-cat-title">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);">
-                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
-                Cloud & Distributed Systems
+                Conversational AI & NLP
               </div>
               <div class="skill-tags-cloud">
-                <span class="skill-chip">Kubernetes (K8s)</span>
-                <span class="skill-chip">Docker & Swarm</span>
-                <span class="skill-chip">Cloud Cost Optimization</span>
-                <span class="skill-chip">Google Cloud Platform (GCP)</span>
-                <span class="skill-chip">Microsoft Azure</span>
-                <span class="skill-chip">CI/CD Automation</span>
-                <span class="skill-chip">Microservices Architecture</span>
-                <span class="skill-chip">Prometheus & Grafana</span>
-                <span class="skill-chip">Zero Trust & Compliance</span>
+                <span class="skill-chip">Virtual Assistant Platforms</span>
+                <span class="skill-chip">Intent Classification</span>
+                <span class="skill-chip">Agent Copilot & AI Training</span>
+                <span class="skill-chip">Low-Code Conversation Builders</span>
+                <span class="skill-chip">Bot-to-Human Handshake</span>
+                <span class="skill-chip">Dialog State Management</span>
+                <span class="skill-chip">AHT & Containment Optimization</span>
               </div>
             </div>
 
             <div class="skill-category-card">
               <div class="skill-cat-title">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-emerald);">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
                 </svg>
-                Frontend & Enterprise SDKs
+                Cloud & MLOps Infrastructure
               </div>
               <div class="skill-tags-cloud">
-                <span class="skill-chip">JavaScript (ES2024+)</span>
-                <span class="skill-chip">React & Redux</span>
-                <span class="skill-chip">React Native (iOS/Android)</span>
-                <span class="skill-chip">Node.js</span>
-                <span class="skill-chip">HTML5 Canvas & SVG</span>
-                <span class="skill-chip">Design Systems (TFS-UI)</span>
-                <span class="skill-chip">WCAG 2.1 Accessibility</span>
-                <span class="skill-chip">Cross-Domain Messaging</span>
-                <span class="skill-chip">V8 Performance Profiling</span>
+                <span class="skill-chip">Kubernetes (K8s)</span>
+                <span class="skill-chip">Docker & Swarm</span>
+                <span class="skill-chip">Cloud Cost Optimization (30-40%)</span>
+                <span class="skill-chip">Google Cloud Platform (GCP)</span>
+                <span class="skill-chip">Microsoft Azure</span>
+                <span class="skill-chip">Declarative CI/CD Pipelines</span>
+                <span class="skill-chip">MLFlow & Model Registries</span>
+                <span class="skill-chip">Prometheus & Grafana</span>
               </div>
             </div>
 
             <div class="skill-category-card">
               <div class="skill-cat-title">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-purple);">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                Enterprise Software Development
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">JavaScript (ES2024+)</span>
+                <span class="skill-chip">Node.js</span>
+                <span class="skill-chip">React & Redux</span>
+                <span class="skill-chip">React Native (iOS & Android)</span>
+                <span class="skill-chip">Enterprise Design Systems</span>
+                <span class="skill-chip">WCAG 2.1 AA Accessibility</span>
+                <span class="skill-chip">C/C++ Apache Modules</span>
+                <span class="skill-chip">Shell & Perl Automation</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #f59e0b;">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+                Enterprise Messaging & Integrations
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Apple Messages for Business</span>
+                <span class="skill-chip">Google Business Messaging</span>
+                <span class="skill-chip">Twilio Programmable SMS</span>
+                <span class="skill-chip">Open Channel API (Swagger)</span>
+                <span class="skill-chip">OAuth2 & JWT Security</span>
+                <span class="skill-chip">Adaptive Content Framework</span>
+                <span class="skill-chip">Salesforce, Dynamics 365, Teams</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #ec4899;">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <line x1="20" y1="8" x2="20" y2="14"></line>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                Process & Engineering Execution
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Strategic Prioritization</span>
+                <span class="skill-chip">Operational Efficiency</span>
+                <span class="skill-chip">Process Optimization</span>
+                <span class="skill-chip">Project Estimation & Sizing</span>
+                <span class="skill-chip">Release Cycles & Stability</span>
+                <span class="skill-chip">Conflict Resolution</span>
+                <span class="skill-chip">Vendor & Budget Governance</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #3b82f6;">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
-                Leadership & Process
+                People, Culture & Mentorship
               </div>
               <div class="skill-tags-cloud">
-                <span class="skill-chip">Cross-Functional Leadership</span>
-                <span class="skill-chip">Team Scaling & Mentorship</span>
-                <span class="skill-chip">Multi-Geo Orchestration</span>
-                <span class="skill-chip">Outcome-Oriented Roadmap</span>
-                <span class="skill-chip">Conflict Resolution</span>
-                <span class="skill-chip">SLA & Incident Management</span>
-                <span class="skill-chip">Enterprise Partner Delivery</span>
-                <span class="skill-chip">Vendor & Budget Management</span>
+                <span class="skill-chip">Global Multi-Geo Leadership</span>
+                <span class="skill-chip">Trust Building & Coaching</span>
+                <span class="skill-chip">Performance Growth</span>
+                <span class="skill-chip">Cross-Functional Collaboration</span>
+                <span class="skill-chip">Customer Success Alignment</span>
+                <span class="skill-chip">University Internship Programs</span>
+                <span class="skill-chip">Measurable Outcome Mindset</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Tab 3: Key Architectural Achievements -->
+        <!-- Tab 3: Notable Projects -->
         <div class="resume-tab-pane" id="tab-projects" role="tabpanel">
-          <div class="timeline">
+          <div class="notable-projects-grid">
 
-            <div class="timeline-item">
-              <div class="timeline-marker">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">AutoGen Agentic Flows</h4>
+                <span class="notable-project-company">Autonomous Agent Systems</span>
               </div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h3 class="timeline-role">AutoGen Agentic Flows & Enterprise Concierge</h3>
-                  <span class="timeline-date">[24]7 Concierge</span>
-                </div>
-                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                  Architected multi-agent collaboration flows using Microsoft AutoGen, orchestrating autonomous AI bots and human agents. The platform dynamically delegates routine tasks to AI while escalating complex edge cases to human specialists with enriched conversation memory.
-                </p>
+              <p class="notable-project-desc">
+                Designed and implemented Microsoft AutoGen-based agentic flows for user concierge applications. Orchestrated seamless collaboration between autonomous AI bots and human agents with dynamic escalation, significantly relieving cognitive load on users.
+              </p>
+              <div class="notable-project-metric">
+                <span>🤖 Multi-Agent Collaboration & User Agent Delegation</span>
               </div>
             </div>
 
-            <div class="timeline-item">
-              <div class="timeline-marker">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                </svg>
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Agent Copilot & Real-Time AI Trainer</h4>
+                <span class="notable-project-company">Contact Center AI & Copilot</span>
               </div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h3 class="timeline-role">40% Cloud Cost Reduction via Kubernetes</h3>
-                  <span class="timeline-date">GCP, Azure & On-Prem</span>
-                </div>
-                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                  Executed a two-phase infrastructure overhaul. First containerized Java and Node.js applications into Docker Swarm, then transitioned workloads to Kubernetes with declarative GitOps pipelines, cutting overall cloud spend by 40% and boosting release velocity by 60%.
-                </p>
+              <p class="notable-project-desc">
+                Automated onboarding and training for newly hired contact center agents via interactive chatflows. Deployed a live copilot on the operations floor providing real-time next-best responses adopted by 60–70% of agents.
+              </p>
+              <div class="notable-project-metric">
+                <span>⚡ 30% Faster Onboarding • 10% AHT Drop</span>
               </div>
             </div>
 
-            <div class="timeline-item">
-              <div class="timeline-marker">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">LLM Proxy Hosting & Inference Serving</h4>
+                <span class="notable-project-company">MLOps & Private Cloud</span>
               </div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h3 class="timeline-role">Unified Omnichannel Messaging Platform</h3>
-                  <span class="timeline-date">Apple, Google & Twilio</span>
-                </div>
-                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                  Led an engineering team of 12 integrating Apple Messages for Business, Google Business Messaging, and Twilio SMS. Designed an adaptive content framework that automatically translated backend responses into rich channel-specific widgets, reducing launch time by 80%.
-                </p>
+              <p class="notable-project-desc">
+                Architected private cloud and on-prem hosting of LLM tools including Promptfoo and Langfuse for prompt evaluation/observability, and LiteLLM/vLLM for high-throughput inference serving with subscription key quota attribution.
+              </p>
+              <div class="notable-project-metric">
+                <span>🎯 High-Throughput vLLM Serving & Cost Telemetry</span>
               </div>
             </div>
 
-            <div class="timeline-item">
-              <div class="timeline-marker">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Low-Code Virtual Assistant Platform</h4>
+                <span class="notable-project-company">Conversational AI Platform</span>
+              </div>
+              <p class="notable-project-desc">
+                Engineered visual self-service workflow builder replacing engineering-heavy bot development. Empowered conversation designers to build and deploy complex virtual assistants without dedicated engineering sprints.
+              </p>
+              <div class="notable-project-metric">
+                <span>🚀 75% Dev Effort Drop • 60-80% Faster Deploy</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">RAG-Based Enterprise Knowledge Retrieval</h4>
+                <span class="notable-project-company">Knowledge Intelligence</span>
+              </div>
+              <p class="notable-project-desc">
+                Unified knowledge retrieval engine auto-indexing enterprise PDFs, HTML docs, and text files. Powered instant, verifiable self-service answers for customers and agents, handling 20–25% of intents autonomously.
+              </p>
+              <div class="notable-project-metric">
+                <span>📈 15% Containment Lift • 10% CSAT Boost</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Cloud Cost Optimization & Kubernetes Migration</h4>
+                <span class="notable-project-company">Multi-Cloud Infrastructure</span>
+              </div>
+              <p class="notable-project-desc">
+                Two-phase infrastructure transformation: containerized Java/Node.js workloads into Docker Swarm, followed by full migration to Kubernetes with declarative GitOps CI/CD pipelines, ACLs, and automated security scanning.
+              </p>
+              <div class="notable-project-metric">
+                <span>💰 30% to 40% Cloud Cost Savings • 70% Faster Deploys</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Enterprise Design System & Reusable UI Framework</h4>
+                <span class="notable-project-company">Design Systems & Standards</span>
+              </div>
+              <p class="notable-project-desc">
+                Designed and architected internal reusable UI component framework from scratch. Established consistent design tokens, cross-product component consistency, automated test suites, and WCAG 2.1 AA accessibility standards.
+              </p>
+              <div class="notable-project-metric">
+                <span>🎨 Unified Enterprise UI • Strict WCAG AA Compliance</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Omnichannel Business Messaging Platform</h4>
+                <span class="notable-project-company">Enterprise Digital Messaging</span>
+              </div>
+              <p class="notable-project-desc">
+                Led 12-engineer team integrating Apple Messages for Business, Google Business Messaging, and Twilio SMS. Drove enterprise digital transformation migrating legacy IVR calls to digital messaging for Fortune 500 retailers.
+              </p>
+              <div class="notable-project-metric">
+                <span>📉 60% Support Cost Reduction • &gt;70% CSAT SLA</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Open Channel API & Webhook Infrastructure</h4>
+                <span class="notable-project-company">API & Security Platform</span>
+              </div>
+              <p class="notable-project-desc">
+                Architected Messaging Open Channel API including Swagger/OpenAPI ingress/egress specifications, webhook payload delivery, and OAuth2/JWT security handshakes. Deployed for a major national retail enterprise.
+              </p>
+              <div class="notable-project-metric">
+                <span>📊 2x Client Revenue • 3x Messaging Throughput</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Adaptive Content Framework</h4>
+                <span class="notable-project-company">Omnichannel Middleware</span>
+              </div>
+              <p class="notable-project-desc">
+                Designed and built unified content middleware translating core conversational payloads into channel-native formats across Apple Messages for Business, SMS, RCS, Voice, Web, and Facebook Messenger.
+              </p>
+              <div class="notable-project-metric">
+                <span>⚡ 80% Reduction in Customer Launch Timelines</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Cross-Platform Mobile Messaging SDK</h4>
+                <span class="notable-project-company">Mobile SDK Infrastructure</span>
+              </div>
+              <p class="notable-project-desc">
+                Pioneered breakthrough third-party Mobile SDK using React Native, consolidating messaging UI components across iOS and Android into a single maintainable codebase for enterprise app embedding.
+              </p>
+              <div class="notable-project-metric">
+                <span>📱 Cut Mobile Integration Timelines in Half</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">High-Performance Conversational Web SDK</h4>
+                <span class="notable-project-company">Web SDK Architecture</span>
+              </div>
+              <p class="notable-project-desc">
+                Led concept-to-launch of ReactJS-Redux single-page web embedding framework. Delivered multi-tab continuity, audio/visual alerts, end-to-end user data isolation, and lightweight asynchronous loading.
+              </p>
+              <div class="notable-project-metric">
+                <span>🌐 Multi-Tab State Continuity • Zero Data Leakage</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Flash-to-HTML5 Engine Migration</h4>
+                <span class="notable-project-company">Modern Web Engineering</span>
+              </div>
+              <p class="notable-project-desc">
+                Engineered migration of legacy Adobe Flash bill estimator and self-service sliders to native HTML5, CSS3, JavaScript, and SVG, eliminating browser plugin dependencies and optimizing mobile responsiveness.
+              </p>
+              <div class="notable-project-metric">
+                <span>✨ 30% Increase in Self-Service Engagement</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Ad Contracts Tracking & High-Throughput Logging Engine</h4>
+                <span class="notable-project-company">Ad Tech & Logging Engine</span>
+              </div>
+              <p class="notable-project-desc">
+                Managed QA automation and C/C++ backend logging modules for tier-1 digital advertising contracts and guaranteed delivery engines. Implemented stability, network latency, memory leak, and high-concurrency integration testing on Linux.
+              </p>
+              <div class="notable-project-metric">
+                <span>🛡️ High-Concurrency Guaranteed Ad Delivery</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 4: Patents & Intellectual Property -->
+        <div class="resume-tab-pane" id="tab-patents" role="tabpanel">
+          <div class="patents-grid">
+
+            <div class="patent-card">
+              <div class="patent-top-row">
+                <span class="patent-id-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  WO2021144723A1
+                </span>
+                <span class="patent-status-pill">Published Patent</span>
+              </div>
+              <h3 class="patent-title">System for handling multi-party interactions with agents of an enterprise and method thereof</h3>
+              <p class="patent-desc">
+                Novel architectural system and method for orchestrating, routing, and synchronizing multi-party conversational interaction sessions. Coordinates real-time handshakes between automated AI agents, human enterprise customer service representatives, and enterprise supervisors in unified customer engagement sessions.
+              </p>
+              <div class="patent-meta">
+                <span><strong>Inventor:</strong> Vageesh Dwivedi et al.</span>
+                <span>•</span>
+                <span><strong>Field:</strong> Conversational AI & Distributed Routing</span>
+              </div>
+            </div>
+
+            <div class="patent-card">
+              <div class="patent-top-row">
+                <span class="patent-id-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  WO2023007359A1
+                </span>
+                <span class="patent-status-pill">Published Patent</span>
+              </div>
+              <h3 class="patent-title">Method and system for providing users with chat interaction experience within emails</h3>
+              <p class="patent-desc">
+                Breakthrough methodology and software framework providing interactive conversational chat capabilities embedded directly inside asynchronous email client rendering viewports. Eliminates external redirects and enables real-time AI and agent message flows within native email templates.
+              </p>
+              <div class="patent-meta">
+                <span><strong>Inventor:</strong> Vageesh Dwivedi et al.</span>
+                <span>•</span>
+                <span><strong>Field:</strong> Interactive Messaging & Email Frameworks</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 5: Education -->
+        <div class="resume-tab-pane" id="tab-education" role="tabpanel">
+          <div class="education-grid">
+
+            <div class="education-card">
+              <div class="education-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                 </svg>
               </div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h3 class="timeline-role">TFS-UI Enterprise Component Framework</h3>
-                  <span class="timeline-date">Design System</span>
-                </div>
-                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                  Designed and built the core ReactJS component library adopted across multiple business units, enforcing visual consistency, automated testing, and WCAG AA accessibility compliance across customer touchpoints.
+              <div>
+                <h3 class="education-degree">Bachelor of Technology (B.Tech) — Electrical & Electronics Engineering</h3>
+                <div class="education-school">National Institute of Technology (NIT), Tiruchirappalli, India</div>
+                <div class="education-year-badge">Graduated 2004 • Premier National Institute of Technology</div>
+                <p class="education-desc">
+                  Rigorous 4-year engineering curriculum providing deep foundations in computational systems, microprocessors and assembly architectures, digital signal processing, system dynamics, algorithmic problem solving, and control systems. NIT Tiruchirappalli is consistently ranked as one of India's top engineering institutions.
                 </p>
               </div>
             </div>
@@ -686,32 +973,34 @@
         <!-- Resume Action Bar -->
         <div class="resume-action-bar">
           <div>
-            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 4px;">Download Official Resume Documents</h4>
-            <p style="font-size: 0.875rem; color: var(--text-secondary);">Available in detailed comprehensive or concise terse PDF formats.</p>
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 4px;">Executive Career Dossier & Profile</h4>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Explore full executive career history, patents, core competencies, and project portfolio.</p>
           </div>
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
             <button class="btn btn-primary" id="open-resume-modal-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
               </svg>
-              Preview in Viewer
+              Open Full Career Dossier
             </button>
-            <a href="./resume-detailed.pdf" download="Vageesh_Dwivedi_Resume_Detailed.pdf" class="btn btn-secondary">
+            <a href="#meeting" class="btn btn-secondary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
               </svg>
-              Detailed Resume (PDF)
+              Schedule Consultation
             </a>
-            <a href="./resume-terse.pdf" download="Vageesh_Dwivedi_Resume_Terse.pdf" class="btn btn-secondary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
+            <a href="https://www.linkedin.com/in/vageesh-dwivedi/" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
-              Terse Resume (PDF)
+              Connect on LinkedIn
             </a>
           </div>
         </div>
@@ -1716,12 +2005,12 @@
         </div>
 
         <div>
-          <h4 class="footer-col-title">Contact & Advisory</h4>
+          <h4 class="footer-col-title">Connect & Inquiries</h4>
           <ul class="footer-nav-list">
-            <li><a href="mailto:vageesh.dwivedi@gmail.com">vageesh.dwivedi@gmail.com</a></li>
-            <li><span>Phone: +1-(408) 679-6025</span></li>
+            <li><a href="https://www.linkedin.com/in/vageesh-dwivedi/" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+            <li><a href="https://github.com/vagdwd" target="_blank" rel="noopener">GitHub Repositories</a></li>
+            <li><a href="#meeting">Book a 1:1 Consultation</a></li>
             <li><span>Location: Silicon Valley / Bay Area, CA</span></li>
-            <li><a href="./resume-detailed.pdf" target="_blank">Download Resume PDF</a></li>
           </ul>
         </div>
       </div>
@@ -1737,10 +2026,10 @@
   </footer>
 
   <!-- ========================================================================
-       Modal 1: Resume PDF Viewer Modal
+       Modal 1: Executive Career Dossier & Profile Modal
        ======================================================================== -->
   <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
-    <div class="modal-container" style="max-width: 1000px;">
+    <div class="modal-container" style="max-width: 1040px; max-height: 92vh;">
       <div class="modal-header">
         <div class="modal-title" id="resume-modal-title">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1750,12 +2039,9 @@
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
-          <span>Vageesh Dwivedi — Executive Resume</span>
+          <span>Executive Portfolio & Career Dossier</span>
         </div>
         <div style="display: flex; align-items: center; gap: 10px;">
-          <a href="./resume-detailed.pdf" download="Vageesh_Dwivedi_Resume_Detailed.pdf" class="btn btn-sm btn-primary">
-            Download PDF
-          </a>
           <button class="modal-close-btn" aria-label="Close modal">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1764,8 +2050,619 @@
           </button>
         </div>
       </div>
-      <div class="modal-body" style="padding: 0;">
-        <iframe src="./resume-detailed.pdf#toolbar=1" class="modal-pdf-iframe" title="Vageesh Dwivedi Resume PDF Viewer"></iframe>
+      <div class="modal-body" style="padding: 24px; overflow-y: auto;">
+
+        <!-- Executive Header Card -->
+        <div class="dossier-profile-card">
+          <div class="dossier-profile-left">
+            <img src="./profile.jpg" alt="Vageesh Dwivedi" class="dossier-avatar-img">
+            <div>
+              <h2 class="dossier-name">Vageesh Dwivedi</h2>
+              <div class="dossier-title">AI & ML Engineering Leader • Director of Engineering</div>
+              <div class="dossier-tags-row">
+                <span class="dossier-tag">📍 Silicon Valley / Bay Area, CA</span>
+                <span class="dossier-tag">⏳ 20+ Years Track Record</span>
+                <span class="dossier-tag">📜 2 US/WIPO Patents</span>
+                <span class="dossier-tag">🎓 NIT Tiruchirappalli Alum</span>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="https://www.linkedin.com/in/vageesh-dwivedi/" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn Profile
+            </a>
+            <a href="#meeting" class="btn btn-sm btn-primary" data-close-modal>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Schedule 1:1 Call
+            </a>
+          </div>
+        </div>
+
+        <!-- Executive Summary Callout (Verbatim from Resume) -->
+        <div class="executive-summary-box">
+          <div class="executive-summary-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            Executive Summary
+          </div>
+          <p class="executive-summary-text">
+            Visionary engineering leader with 20+ years of experience building and scaling high-performance, enterprise-grade AI Operations (AIOps) and data platforms. Proven track record in leading global teams to develop intelligent systems that process high-volume data streams, reduce operational noise, and deliver actionable insights. Expertise in building cloud-native infrastructure on Kubernetes, driving MLOps best practices, and delivering significant improvements in operational efficiency and cost. Strong expertise in LLM-powered solutions, RAG-based Q&A systems, and Virtual Assistant platforms. Adept at leading cross-functional teams to deliver high-impact AI solutions at scale.
+          </p>
+        </div>
+
+        <!-- Dossier Navigation Tabs -->
+        <div class="dossier-tabs-nav" role="tablist">
+          <button class="dossier-tab-btn active" data-tab="skills" role="tab" aria-selected="true">
+            Core Skills
+          </button>
+          <button class="dossier-tab-btn" data-tab="experience" role="tab" aria-selected="false">
+            Experience
+          </button>
+          <button class="dossier-tab-btn" data-tab="patents" role="tab" aria-selected="false">
+            Patents & IP
+          </button>
+          <button class="dossier-tab-btn" data-tab="education" role="tab" aria-selected="false">
+            Education
+          </button>
+          <button class="dossier-tab-btn" data-tab="projects" role="tab" aria-selected="false">
+            Notable Projects
+          </button>
+        </div>
+
+        <!-- Tab 1: Core Skills -->
+        <div class="dossier-tab-pane active" id="dossier-tab-skills" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-category-card">
+              <div class="skill-cat-title" style="color: var(--accent-primary);">
+                🤖 AI / ML & Generative AI
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Microsoft AutoGen</span>
+                <span class="skill-chip">Multi-Agent Systems</span>
+                <span class="skill-chip">RAG Pipelines</span>
+                <span class="skill-chip">LangChain & LlamaIndex</span>
+                <span class="skill-chip">vLLM & LiteLLM</span>
+                <span class="skill-chip">Promptfoo & Langfuse</span>
+                <span class="skill-chip">Embedding Models & Vector Search</span>
+                <span class="skill-chip">Token & Quota Optimization</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title" style="color: var(--accent-cyan);">
+                💬 Conversational AI & NLP
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Virtual Assistant Platforms</span>
+                <span class="skill-chip">Intent Classification</span>
+                <span class="skill-chip">Agent Copilot & AI Training</span>
+                <span class="skill-chip">Low-Code Conversation Builders</span>
+                <span class="skill-chip">Bot-to-Human Handshake</span>
+                <span class="skill-chip">Dialog State Management</span>
+                <span class="skill-chip">AHT & Containment Optimization</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title" style="color: var(--accent-emerald);">
+                ☁️ Cloud & MLOps Infrastructure
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Kubernetes (K8s)</span>
+                <span class="skill-chip">Docker & Swarm</span>
+                <span class="skill-chip">Cloud Cost Optimization (30-40%)</span>
+                <span class="skill-chip">Google Cloud Platform (GCP)</span>
+                <span class="skill-chip">Microsoft Azure</span>
+                <span class="skill-chip">Declarative CI/CD Pipelines</span>
+                <span class="skill-chip">Prometheus & Grafana</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title" style="color: var(--accent-purple);">
+                💻 Enterprise Software Development
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">JavaScript (ES2024+)</span>
+                <span class="skill-chip">Node.js</span>
+                <span class="skill-chip">React & Redux</span>
+                <span class="skill-chip">React Native (iOS & Android)</span>
+                <span class="skill-chip">Enterprise Design Systems</span>
+                <span class="skill-chip">WCAG 2.1 AA Accessibility</span>
+                <span class="skill-chip">C/C++ Apache Modules</span>
+                <span class="skill-chip">Shell & Perl Automation</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title" style="color: #f59e0b;">
+                🔗 Enterprise Messaging & Integrations
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Apple Messages for Business</span>
+                <span class="skill-chip">Google Business Messaging</span>
+                <span class="skill-chip">Twilio Programmable SMS</span>
+                <span class="skill-chip">Open Channel API (Swagger)</span>
+                <span class="skill-chip">OAuth2 & JWT Security</span>
+                <span class="skill-chip">Adaptive Content Framework</span>
+                <span class="skill-chip">Salesforce, Dynamics 365, Teams</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title" style="color: #ec4899;">
+                📊 Process & Engineering Execution
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Strategic Prioritization</span>
+                <span class="skill-chip">Operational Efficiency</span>
+                <span class="skill-chip">Process Optimization</span>
+                <span class="skill-chip">Project Estimation & Sizing</span>
+                <span class="skill-chip">Release Cycles & Stability</span>
+                <span class="skill-chip">Conflict Resolution</span>
+                <span class="skill-chip">Vendor & Budget Governance</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <div class="skill-cat-title" style="color: #3b82f6;">
+                👥 People, Culture & Mentorship
+              </div>
+              <div class="skill-tags-cloud">
+                <span class="skill-chip">Global Multi-Geo Leadership</span>
+                <span class="skill-chip">Trust Building & Coaching</span>
+                <span class="skill-chip">Performance Growth</span>
+                <span class="skill-chip">Cross-Functional Collaboration</span>
+                <span class="skill-chip">Customer Success Alignment</span>
+                <span class="skill-chip">University Internship Programs</span>
+                <span class="skill-chip">Measurable Outcome Mindset</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Experience -->
+        <div class="dossier-tab-pane" id="dossier-tab-experience" role="tabpanel">
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Director, Engineering</h3>
+                    <div class="timeline-company">Movius Interactive Corp</div>
+                  </div>
+                  <span class="timeline-date">2025 – Present</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Leading a 10-person global engineering team building and scaling Partner Integrations using Messaging APIs. Secure messaging and calling on Salesforce, Dynamics 365, Zoom, and MS Teams.</li>
+                  <li>Created and currently executing the org-wide AI adoption strategy. From vendor selection, security and risk assessment, evangelism, adoption, to setting goals for outcomes. Optimizing token consumption and managing quotas through training, coaching, and observational usage analysis.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 247.ai Director -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Director Software Development</h3>
+                    <div class="timeline-company">247.ai Inc</div>
+                  </div>
+                  <span class="timeline-date">2015 – 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Led a 24-engineer global team (in three geographies) developing enterprise-scale AI-powered Conversational AI solutions, managing end-to-end product lifecycle, including feature planning, technical design, and security compliance for a SaaS suite serving millions of users across digital and voice channels.</li>
+                  <li>Pioneered AI/ML initiatives implementing RAG-based Q&A systems and Microsoft AutoGen-powered agentic flows, optimizing contact center operations through an intelligent agent copilot and automated training platform for seamless bot-human orchestration, reducing onboarding time by 30% and AHT by 10%.</li>
+                  <li>Reduced cloud infrastructure costs by 40% through a strategic containerization initiative, migrating legacy applications to Kubernetes while implementing robust CI/CD pipelines and security frameworks across environments.</li>
+                  <li>Revolutionized virtual assistant development by implementing a low-code, designer-focused self-service tool, reducing development effort by 75% and accelerating deployment time by 60–80% across various complexity levels.</li>
+                  <li>Drove digital transformation for major enterprises, achieving 60% cost reduction in customer support through migration from legacy IVR to digital chat platforms while maintaining 70% customer satisfaction SLA, partnering with industry leaders like Apple, Google, and Twilio for enterprise messaging solutions.</li>
+                  <li>Developed a React Native-based SDK for iOS/Android chat integrations and a Web SDK using React.js to reduce launch time for customers by 70%.</li>
+                  <li>Spearheaded an enterprise ReactJS-based reusable component library and design system, reducing UI development efforts across teams.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 247.ai Manager -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Manager Software Development</h3>
+                    <div class="timeline-company">247.ai Inc</div>
+                  </div>
+                  <span class="timeline-date">2010 – 2015</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Spearheaded the transition and ownership of two critical frontend frameworks at 247.ai, combining hands-on development with strategic optimization across global teams.</li>
+                  <li>Built and led a high-performing engineering team from scratch, overseeing the full product lifecycle from feasibility analysis to feature rollout.</li>
+                  <li>Established agile development processes with regular release cycles and feedback loops, ensuring production stability while rapidly advancing from IC to leadership.</li>
+                  <li>Evolved JavaScript expertise from Prototype.js and Scriptaculous to native implementations, advocating for framework-independent solutions.</li>
+                  <li>Specialized in cross-browser compatibility, delivering robust solutions for enterprise applications on IE7/8 and legacy mobile OS.</li>
+                  <li>Launched and led a successful internship program, mentoring junior developers into high-impact engineers.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Infosys -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Technology Lead</h3>
+                    <div class="timeline-company">Infosys</div>
+                  </div>
+                  <span class="timeline-date">2008 – 2010</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Led QA engineering operations for a tier-1 digital advertising contracts and guaranteed delivery system, ensuring guaranteed ad delivery through rigorous testing and automation.</li>
+                  <li>Designed and implemented diverse testing methodologies—Continuous Operation, Stability, Network Latency, Deployment, Code Coverage, Memory Leak, and End-to-End Integration—leveraging Shell and Perl scripting for automation.</li>
+                  <li>Developed a high-performance ad tracking platform, building full-stack solutions with Apache server applications and custom C/C++ Apache modules.</li>
+                  <li>Engineered a robust logging infrastructure using log4cpp and Boost on Linux, enabling comprehensive ad performance monitoring across tier-1 digital publishing and partner networks.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- IBM -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Application Developer</h3>
+                    <div class="timeline-company">IBM</div>
+                  </div>
+                  <span class="timeline-date">2005 – 2008</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Delivered mission-critical Order Management, Reporting, and Invoicing systems for high-throughput financial feeds data for a leading global financial media client, utilizing OpenVMS, Pro*C, and Unix shell scripting.</li>
+                  <li>This role helped me build effective client communication, negotiation skills, understanding of onshore-offshore orchestration, technical analysis, design strategy, software development, and estimation.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Cognizant -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 12h8"></path>
+                </svg>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Programmer Analyst</h3>
+                    <div class="timeline-company">Cognizant</div>
+                  </div>
+                  <span class="timeline-date">2004 – 2005</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Built test tools for products in the auction industry using XML, XSLT, Perl, and automation testing frameworks.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 3: Patents -->
+        <div class="dossier-tab-pane" id="dossier-tab-patents" role="tabpanel">
+          <div class="patents-grid">
+
+            <div class="patent-card">
+              <div class="patent-top-row">
+                <span class="patent-id-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  WO2021144723A1
+                </span>
+                <span class="patent-status-pill">Published Patent</span>
+              </div>
+              <h3 class="patent-title">System for handling multi-party interactions with agents of an enterprise and method thereof</h3>
+              <p class="patent-desc">
+                Novel architectural system and method for orchestrating, routing, and synchronizing multi-party conversational interaction sessions. Coordinates real-time handshakes between automated AI agents, human enterprise customer service representatives, and enterprise supervisors in unified customer engagement sessions.
+              </p>
+              <div class="patent-meta">
+                <span><strong>Inventor:</strong> Vageesh Dwivedi et al.</span>
+                <span>•</span>
+                <span><strong>Field:</strong> Conversational AI & Distributed Routing</span>
+              </div>
+            </div>
+
+            <div class="patent-card">
+              <div class="patent-top-row">
+                <span class="patent-id-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  WO2023007359A1
+                </span>
+                <span class="patent-status-pill">Published Patent</span>
+              </div>
+              <h3 class="patent-title">Method and system for providing users with chat interaction experience within emails</h3>
+              <p class="patent-desc">
+                Breakthrough methodology and software framework providing interactive conversational chat capabilities embedded directly inside asynchronous email client rendering viewports. Eliminates external redirects and enables real-time AI and agent message flows within native email templates.
+              </p>
+              <div class="patent-meta">
+                <span><strong>Inventor:</strong> Vageesh Dwivedi et al.</span>
+                <span>•</span>
+                <span><strong>Field:</strong> Interactive Messaging & Email Frameworks</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 4: Education -->
+        <div class="dossier-tab-pane" id="dossier-tab-education" role="tabpanel">
+          <div class="education-grid">
+            <div class="education-card">
+              <div class="education-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="education-degree">Bachelor of Technology (B.Tech) — Electrical & Electronics Engineering</h3>
+                <div class="education-school">National Institute of Technology (NIT), Tiruchirappalli, India</div>
+                <div class="education-year-badge">Graduated 2004 • Premier National Institute of Technology</div>
+                <p class="education-desc">
+                  Rigorous 4-year engineering curriculum providing deep foundations in computational systems, microprocessors and assembly architectures, digital signal processing, system dynamics, algorithmic problem solving, and control systems. NIT Tiruchirappalli is consistently ranked as one of India's top engineering institutions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Projects -->
+        <div class="dossier-tab-pane" id="dossier-tab-projects" role="tabpanel">
+          <div class="notable-projects-grid">
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">AutoGen Agentic Flows</h4>
+                <span class="notable-project-company">Autonomous Agent Systems</span>
+              </div>
+              <p class="notable-project-desc">
+                Designed and implemented Microsoft AutoGen-based agentic flows for user concierge applications. Orchestrated seamless collaboration between autonomous AI bots and human agents with dynamic escalation, significantly relieving cognitive load on users.
+              </p>
+              <div class="notable-project-metric">
+                <span>🤖 Multi-Agent Collaboration & User Agent Delegation</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Agent Copilot & Real-Time AI Trainer</h4>
+                <span class="notable-project-company">Contact Center AI & Copilot</span>
+              </div>
+              <p class="notable-project-desc">
+                Automated onboarding and training for newly hired contact center agents via interactive chatflows. Deployed a live copilot on the operations floor providing real-time next-best responses adopted by 60–70% of agents.
+              </p>
+              <div class="notable-project-metric">
+                <span>⚡ 30% Faster Onboarding • 10% AHT Drop</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">LLM Proxy Hosting & Inference Serving</h4>
+                <span class="notable-project-company">MLOps & Private Cloud</span>
+              </div>
+              <p class="notable-project-desc">
+                Architected private cloud and on-prem hosting of LLM tools including Promptfoo and Langfuse for prompt evaluation/observability, and LiteLLM/vLLM for high-throughput inference serving with subscription key quota attribution.
+              </p>
+              <div class="notable-project-metric">
+                <span>🎯 High-Throughput vLLM Serving & Cost Telemetry</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Low-Code Virtual Assistant Platform</h4>
+                <span class="notable-project-company">Conversational AI Platform</span>
+              </div>
+              <p class="notable-project-desc">
+                Engineered visual self-service workflow builder replacing engineering-heavy bot development. Empowered conversation designers to build and deploy complex virtual assistants without dedicated engineering sprints.
+              </p>
+              <div class="notable-project-metric">
+                <span>🚀 75% Dev Effort Drop • 60-80% Faster Deploy</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">RAG-Based Enterprise Knowledge Retrieval</h4>
+                <span class="notable-project-company">Knowledge Intelligence</span>
+              </div>
+              <p class="notable-project-desc">
+                Unified knowledge retrieval engine auto-indexing enterprise PDFs, HTML docs, and text files. Powered instant, verifiable self-service answers for customers and agents, handling 20–25% of intents autonomously.
+              </p>
+              <div class="notable-project-metric">
+                <span>📈 15% Containment Lift • 10% CSAT Boost</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Cloud Cost Optimization & Kubernetes Migration</h4>
+                <span class="notable-project-company">Multi-Cloud Infrastructure</span>
+              </div>
+              <p class="notable-project-desc">
+                Two-phase infrastructure transformation: containerized Java/Node.js workloads into Docker Swarm, followed by full migration to Kubernetes with declarative GitOps CI/CD pipelines, ACLs, and automated security scanning.
+              </p>
+              <div class="notable-project-metric">
+                <span>💰 30% to 40% Cloud Cost Savings • 70% Faster Deploys</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Enterprise Design System & Reusable UI Framework</h4>
+                <span class="notable-project-company">Design Systems & Standards</span>
+              </div>
+              <p class="notable-project-desc">
+                Designed and architected internal reusable UI component framework from scratch. Established consistent design tokens, cross-product component consistency, automated test suites, and WCAG 2.1 AA accessibility standards.
+              </p>
+              <div class="notable-project-metric">
+                <span>🎨 Unified Enterprise UI • Strict WCAG AA Compliance</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Omnichannel Business Messaging Platform</h4>
+                <span class="notable-project-company">Enterprise Digital Messaging</span>
+              </div>
+              <p class="notable-project-desc">
+                Led 12-engineer team integrating Apple Messages for Business, Google Business Messaging, and Twilio SMS. Drove enterprise digital transformation migrating legacy IVR calls to digital messaging for Fortune 500 retailers.
+              </p>
+              <div class="notable-project-metric">
+                <span>📉 60% Support Cost Reduction • &gt;70% CSAT SLA</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Open Channel API & Webhook Infrastructure</h4>
+                <span class="notable-project-company">API & Security Platform</span>
+              </div>
+              <p class="notable-project-desc">
+                Architected Messaging Open Channel API including Swagger/OpenAPI ingress/egress specifications, webhook payload delivery, and OAuth2/JWT security handshakes. Deployed for a major national retail enterprise.
+              </p>
+              <div class="notable-project-metric">
+                <span>📊 2x Client Revenue • 3x Messaging Throughput</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Adaptive Content Framework</h4>
+                <span class="notable-project-company">Omnichannel Middleware</span>
+              </div>
+              <p class="notable-project-desc">
+                Designed and built unified content middleware translating core conversational payloads into channel-native formats across Apple Messages for Business, SMS, RCS, Voice, Web, and Facebook Messenger.
+              </p>
+              <div class="notable-project-metric">
+                <span>⚡ 80% Reduction in Customer Launch Timelines</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Cross-Platform Mobile Messaging SDK</h4>
+                <span class="notable-project-company">Mobile SDK Infrastructure</span>
+              </div>
+              <p class="notable-project-desc">
+                Pioneered breakthrough third-party Mobile SDK using React Native, consolidating messaging UI components across iOS and Android into a single maintainable codebase for enterprise app embedding.
+              </p>
+              <div class="notable-project-metric">
+                <span>📱 Cut Mobile Integration Timelines in Half</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">High-Performance Conversational Web SDK</h4>
+                <span class="notable-project-company">Web SDK Architecture</span>
+              </div>
+              <p class="notable-project-desc">
+                Led concept-to-launch of ReactJS-Redux single-page web embedding framework. Delivered multi-tab continuity, audio/visual alerts, end-to-end user data isolation, and lightweight asynchronous loading.
+              </p>
+              <div class="notable-project-metric">
+                <span>🌐 Multi-Tab State Continuity • Zero Data Leakage</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Flash-to-HTML5 Engine Migration</h4>
+                <span class="notable-project-company">Modern Web Engineering</span>
+              </div>
+              <p class="notable-project-desc">
+                Engineered migration of legacy Adobe Flash bill estimator and self-service sliders to native HTML5, CSS3, JavaScript, and SVG, eliminating browser plugin dependencies and optimizing mobile responsiveness.
+              </p>
+              <div class="notable-project-metric">
+                <span>✨ 30% Increase in Self-Service Engagement</span>
+              </div>
+            </div>
+
+            <div class="notable-project-card">
+              <div class="notable-project-top">
+                <h4 class="notable-project-title">Ad Contracts Tracking & High-Throughput Logging Engine</h4>
+                <span class="notable-project-company">Ad Tech & Logging Engine</span>
+              </div>
+              <p class="notable-project-desc">
+                Managed QA automation and C/C++ backend logging modules for tier-1 digital advertising contracts and guaranteed delivery engines. Implemented stability, network latency, memory leak, and high-concurrency integration testing on Linux.
+              </p>
+              <div class="notable-project-metric">
+                <span>🛡️ High-Concurrency Guaranteed Ad Delivery</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Modal Footer Actions -->
+        <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            Extracts verified from executive dossier • Zero external tracking
+          </div>
+          <button class="btn btn-secondary" data-close-modal>
+            Close Dossier
+          </button>
+        </div>
+
       </div>
     </div>
   </div>
